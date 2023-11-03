@@ -1,0 +1,43 @@
+<!DOCTYPE html><meta charset="utf-8" />
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/newproject.css" />
+</head>
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <span id="title">Archivy</span>
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a class="register-button-text" href="{{url_for('code')}}"
+                >Learn more</a
+              >
+            </div>
+            <div class="undefined secondaryButton">
+              <a class="login-button-text" href="{{url_for('login')}}"
+                >Log in</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="signUp-Box">
+          <h1>New Project</h1>
+          <form id="signup-form" method="POST" action="">
+            {{ form.hidden_tag() }} {{ form.name }} {{ form.address }} {{
+            form.description }}
+
+            <div id="password-strength"></div>
+
+            {{ form.submit }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

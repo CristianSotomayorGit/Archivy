@@ -1,0 +1,95 @@
+<!DOCTYPE html><meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="../static/css/profile.css" />
+
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <span id="title">Archivy</span>
+          <a href="/">
+            <!--                    <img src="./logo.png" alt="our logo"> -->
+          </a>
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a href="{{url_for('newproject')}}">New Project +</a>
+            </div>
+            <div class="undefined secondaryButton">
+              <a href="{{url_for('logout')}}">Log out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="codeExplorer">
+          <div id="managerHeader">
+            <div id="headerLabel">
+              <span>Profile</span>
+            </div>
+          </div>
+          <div class="codeContainer">
+            <div class="userInfo">
+              <div class="userField">
+                <label for="firstname">First Name:</label>
+                <span id="firstname">{{ user.firstname }}</span>
+              </div>
+              <div class="userField">
+                <label for="lastname">Last Name:</label>
+                <span id="lastname">{{ user.lastname }}</span>
+              </div>
+              <div class="userField">
+                <label for="email">Email:</label>
+                <span id="email">{{ user.email }}</span>
+              </div>
+              <div class="userField">
+                <label for="username">Username:</label>
+                <span id="username">{{ user.username }}</span>
+              </div>
+              <div class="userProjects">
+                <div class="userField">
+                  <label for="lastname">Projects:</label>
+                </div>
+                {% for project in projects %}
+                <div class="userProjectField">
+                  <div class="projectInfo">
+                    <label class="project{{ loop.index }}"
+                      >{{ project.name }}:</label
+                    >
+                    <span id="project{{ loop.index }}"
+                      >{{ project.address }}</span
+                    >
+                  </div>
+                  <div class="barButtons">
+                    <a
+                      href="{{ url_for('projectdetail', project_id=project.id) }}"
+                      class="detail-btn"
+                      >view</a
+                    >
+                    <form
+                      class="inline-form"
+                      method="post"
+                      action="{{ url_for('deleteproject', project_id=project.id) }}"
+                    >
+                      <button
+                        type="submit"
+                        class="delete-btn"
+                        onclick="return confirm('Are you sure you want to delete this project?');"
+                      >
+                        X
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

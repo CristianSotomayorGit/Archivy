@@ -1,0 +1,52 @@
+<!DOCTYPE html><meta charset="utf-8" />
+<head>
+  <title>Log in</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/login.css" />
+</head>
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <span id="title">Archivy</span>
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a class="register-button-text" href="{{url_for('code')}}"
+                >Learn more</a
+              >
+            </div>
+            <div class="undefined secondaryButton">
+              <a class="login-button-text" href="{{url_for('register')}}"
+                >Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="signUp-Box">
+          <h1
+            style="
+              color: white;
+              font-size: 2.2rem;
+              font-family: warnock-pro, Palatino, 'Palatino Linotype',
+                'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+            "
+          >
+            Sign In
+          </h1>
+          <form id="signup-form" method="POST" action="">
+            {{ form.hidden_tag() }} {{ form.username }} {{ form.password }} {{
+            form.submit }}
+            <p style="color: white">
+              Don't have an account?
+              <a href="{{url_for('register')}}">Register</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

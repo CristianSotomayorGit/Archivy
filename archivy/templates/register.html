@@ -1,0 +1,63 @@
+<!DOCTYPE html><meta charset="utf-8" />
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/register.css" />
+</head>
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <span id="title">Archivy</span>
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a class="register-button-text" href="{{url_for('code')}}"
+                >Learn more</a
+              >
+            </div>
+            <div class="undefined secondaryButton">
+              <a class="login-button-text" href="{{url_for('login')}}"
+                >Log in</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="signUp-Box">
+          <h1>Sign Up to Our Waitlist</h1>
+          <form id="signup-form" method="POST" action="">
+            {{ form.hidden_tag() }} {{ form.firstname }} {{ form.lastname }} {{
+            form.email }} {{ form.username }} {{ form.password }}
+
+            <div id="password-strength"></div>
+
+            <div style="margin-top: 16px; margin-bottom: 16px">
+              <label style="color: white; display: flex">
+                <input
+                  style="height: 15px; width: 15px; margin-right: 15px"
+                  type="checkbox"
+                  id="terms"
+                  required
+                />
+                <p style="margin: 0">
+                  I agree to the
+                  <a href="/terms" target="_blank"> Terms of Service </a> and
+                  <a href="/privacy" target="_blank"> Privacy Policy</a>
+                </p>
+              </label>
+            </div>
+            {{ form.submit }}
+
+            <p style="color: white">
+              Already have an account?
+              <a href="{{url_for('login')}}">Sign In</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

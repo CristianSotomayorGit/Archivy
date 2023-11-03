@@ -1,0 +1,443 @@
+#text-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  line-height: 1;
+}
+
+#text-layer > div {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+#title {
+  color: #05e132ad;
+  font-family: TimesNewRoman;
+  font-style: lighter;
+  font-size: 25px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #14171f;
+  font-size: 16px;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 55px;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: space-between;
+  border-bottom: 2px solid #262a39;
+  background-color: #181b26;
+  border-top: 4px solid #05e132ad;
+  padding-top: 2px;
+  min-height: 55px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.logo img {
+  height: 20px;
+}
+
+.header .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linkButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.linkButtons > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.discordIcon,
+.linkButtons {
+  margin-right: 20px;
+}
+
+.githubIcon,
+.star-count {
+  display: flex;
+  align-items: center;
+}
+
+.star-count {
+  color: #d93cff;
+}
+
+.githubIcon,
+.star-count {
+  display: flex;
+  align-items: center;
+}
+
+.star-count > svg {
+  padding-left: 5px;
+  padding-top: 1px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+#signUpButton {
+  margin-right: 10px;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05e132ad;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  opacity: 1;
+}
+
+.secondaryButton {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid hsla(0, 0%, 100%, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 35px;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: calc(100% - 55px);
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: space-between;
+}
+
+#chatBot,
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
+#chatBot {
+  height: calc(100% - 30px + 2px + 2px);
+  width: 40%;
+  max-width: 40%;
+  justify-content: space-between;
+}
+
+.aiResponse {
+  background-color: #2b3044 !important;
+  align-self: flex-start !important;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  color: #14171f; /* or another color that signifies deletion */
+  /* font-weight: bold; */
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle; /* to align with the project details */
+}
+
+.delete-btn:hover {
+  text-decoration: underline; /* or another hover effect */
+}
+
+.barButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.chatMessage {
+  position: relative;
+  padding: 15px;
+  border-radius: 7px;
+  color: #fff;
+  margin-bottom: 15px;
+  background-color: #05e132ad;
+  align-self: flex-end;
+  width: calc(100% - 15px - 15px);
+  overflow-wrap: break-word;
+}
+
+.projectLabel {
+  padding: 10px 0;
+}
+.userProjectField {
+  position: relative;
+  padding: 15px;
+  border-radius: 7px;
+  color: #fff;
+  margin-top: 15px;
+  background-color: #05e132ad;
+  align-self: flex-end;
+  /* width: 100%;
+  overflow-wrap: break-word; */
+
+  display: flex;
+  align-items: center; /* vertically aligns the items in the middle */
+  justify-content: space-between; /* aligns items to the start of the container */
+}
+
+.userProjectField {
+  background-color: #2b3044 !important;
+  align-self: flex-start !important;
+}
+
+.projectDescription {
+  margin: 16px 0px 0px 0px;
+}
+
+.messageContent {
+  font-weight: 400;
+}
+
+.plainText {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#codeExplorer 
+/* {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 30px);
+  border: 2px solid #262a39;
+  border-radius: 7px;
+  background-color: #181b26;
+  width: calc(60% - 30px);
+  max-width: calc(60% - 30px);
+} */ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 30px);
+  border: 2px solid #262a39;
+  border-radius: 7px;
+  background-color: #181b26;
+  width: calc(60% - 30px);
+  max-width: calc(60% - 30px);
+
+  margin: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#messages {
+  overflow-y: scroll;
+  margin-bottom: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#chatBot,
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
+#inputField {
+  border: 2px solid #262a39;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+#inputFieldArea,
+#inputFieldValue {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 15px;
+}
+
+#inputFieldArea {
+  z-index: 3;
+  justify-content: space-between;
+  background-color: #181b26;
+  padding-left: 15px;
+  border-radius: 7px;
+}
+
+#inputFieldValue {
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  background: none;
+  width: 100%;
+  resize: none;
+  font-size: 16px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#sendInputButton {
+  color: #fff;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05e132ad;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  opacity: 1;
+}
+
+#headerLabel,
+#managerHeader {
+  display: flex;
+  align-items: center;
+}
+
+#managerHeader {
+  border-bottom: 2px solid #262a39;
+  width: 100%;
+  height: 60px;
+  min-height: 60px;
+  justify-content: space-between;
+  background-color: #14171f;
+  border-radius: 5px 5px 0 0;
+}
+
+#headerLabel {
+  padding-left: 15px;
+}
+
+#headerLabel,
+#managerHeader {
+  display: flex;
+  align-items: center;
+}
+
+#managerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.codeContainer {
+  border-bottom: 2px solid #262a39;
+  width: 100%;
+  height: 100%;
+
+  background-color: #14171f;
+  border-radius: 5px 5px 0 0;
+
+  overflow: hidden;
+}
+
+#codeText {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  margin: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.selected-text {
+  background-color: rgb(41, 99, 52);
+}
+
+/* user infor styling */
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  padding: 15px;
+  /* border-bottom: 2px solid #262a39; */
+  background-color: #14171f;
+  border-radius: 5px 5px 0 0;
+}
+
+.userField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 0;
+  border-bottom: 1px solid #262a39;
+  font-size: 16px;
+  color: #fff;
+}
+
+.userField:last-child {
+  border-bottom: none;
+}
+
+.userField label {
+  font-weight: 500;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.userField span {
+  font-weight: 400;
+}

@@ -1,0 +1,7441 @@
+html {
+  width: 100% !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  color: white !important;
+  text-align: left !important;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 30px;
+  padding-right: 50px;
+  overflow-x: hidden;
+}
+
+a {
+  color: white; /* This makes the text color green */
+  text-decoration: none; /* This removes the underline from the hyperlink */
+}
+
+a:hover {
+  color: green; /* This makes the text color green */
+  text-decoration: underline; /* This adds an underline to the hyperlink when hovered */
+}
+p {
+  transition: background-color 0.1s ease-in-out;
+  transition: padding 0.1s ease-in-out;
+}
+p:hover {
+  border: 2px solid #262839; /* 2px wide solid black border */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #262839;
+}
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Dark semi-transparent background */
+  border-radius: 10px; /* Rounded ends of the scrollbar */
+}
+
+/* Scrollbar thumb (the part that you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #606060; /* Dark gray color */
+  border-radius: 10px; /* Rounded ends of the scrollbar */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Change color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #505050; /* Even darker gray for hover effect */
+}
+
+/* h1 { 
+ color: #fff;
+ font-family: "Trebuchet MS", sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 36pt;
+}
+.s1 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 18pt;
+}
+.s2 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 16pt;
+}
+.p,
+p {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+ margin: 0pt;
+}
+.s3 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+h2 {
+ color: #fff;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 34pt;
+}
+.s4 {
+ color: #808285;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 34pt;
+ vertical-align: -14pt;
+}
+.s6 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 13pt;
+}
+.s7 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 13pt;
+}
+.s8 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 13pt;
+}
+h4 {
+ color: #808285;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 33pt;
+}
+.s9 {
+ color: #808285;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 32.5pt;
+}
+h3 {
+ color: #808285;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 33.5pt;
+}
+.s10 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: italic;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s11 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s12 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s13 {
+ color: #fff;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 26pt;
+}
+.s14 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 12pt;
+}
+.s15 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 12pt;
+}
+.s16 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 18pt;
+}
+.s17 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 15pt;
+}
+.s18 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s19 {
+ color: #010000;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 15pt;
+}
+.s20 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s21 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 13pt;
+}
+.s22 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 14pt;
+}
+.s24 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s25 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s26 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 14pt;
+}
+.s27 {
+ color: #fff;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 25pt;
+}
+.s28 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 12pt;
+}
+.s29 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 15pt;
+}
+.s30 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s31 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 10.5pt;
+}
+.s32 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 8pt;
+}
+.a,
+a {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+.s33 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+.s34 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s35 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+.s36 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 17pt;
+}
+.s37 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 7pt;
+ vertical-align: 3pt;
+}
+.s38 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s40 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 7pt;
+ vertical-align: 3pt;
+}
+.s41 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 8.5pt;
+ vertical-align: 4pt;
+}
+.s43 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 8.5pt;
+ vertical-align: 4pt;
+}
+.s45 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 2.5pt;
+}
+.s46 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+ vertical-align: 10pt;
+}
+.s47 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+.s48 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 8pt;
+}
+.s49 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+ vertical-align: 11pt;
+}
+.s50 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+.s51 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 8.5pt;
+}
+.s52 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 2.5pt;
+ vertical-align: -1pt;
+}
+.s53 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 7.5pt;
+}
+.s54 {
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+ vertical-align: 4pt;
+}
+.s55 {
+ color: black;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+ vertical-align: 5pt;
+}
+.s56 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 14pt;
+}
+.s57 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s58 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: italic;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s59 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s60 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: underline;
+ font-size: 14pt;
+}
+.s61 {
+ color: #231f20;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+.s62 {
+ color: #231f20;
+ font-family: "Times New Roman", serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: underline;
+ font-size: 11pt;
+}
+li {
+ display: block;
+}
+#l1 {
+ padding-left: 0pt;
+}
+#l1 > li > *:first-child:before {
+ content: "• ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 13pt;
+}
+li {
+ display: block;
+}
+#l2 {
+ padding-left: 0pt;
+ counter-reset: d1 1;
+}
+#l2 > li > *:first-child:before {
+ counter-increment: d1;
+ content: "(" counter(d1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l2 > li:first-child > *:first-child:before {
+ counter-increment: d1 0;
+}
+li {
+ display: block;
+}
+#l3 {
+ padding-left: 0pt;
+ counter-reset: e1 1;
+}
+#l3 > li > *:first-child:before {
+ counter-increment: e1;
+ content: "(" counter(e1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l3 > li:first-child > *:first-child:before {
+ counter-increment: e1 0;
+}
+#l4 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l4 > li > *:first-child:before {
+ counter-increment: e2;
+ content: "(" counter(e2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l4 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l5 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l5 > li > *:first-child:before {
+ counter-increment: e3;
+ content: "(" counter(e3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l5 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l6 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l6 > li > *:first-child:before {
+ counter-increment: e2;
+ content: "(" counter(e2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l6 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l7 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l7 > li > *:first-child:before {
+ counter-increment: e3;
+ content: "(" counter(e3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l7 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l8 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l8 > li > *:first-child:before {
+ counter-increment: e3;
+ content: "(" counter(e3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l8 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l9 {
+ padding-left: 0pt;
+ counter-reset: e4 1;
+}
+#l9 > li > *:first-child:before {
+ counter-increment: e4;
+ content: "(" counter(e4, upper-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l9 > li:first-child > *:first-child:before {
+ counter-increment: e4 0;
+}
+#l10 {
+ padding-left: 0pt;
+ counter-reset: e4 1;
+}
+#l10 > li > *:first-child:before {
+ counter-increment: e4;
+ content: "(" counter(e4, upper-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l10 > li:first-child > *:first-child:before {
+ counter-increment: e4 0;
+}
+#l11 {
+ padding-left: 0pt;
+ counter-reset: e4 1;
+}
+#l11 > li > *:first-child:before {
+ counter-increment: e4;
+ content: "(" counter(e4, upper-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l11 > li:first-child > *:first-child:before {
+ counter-increment: e4 0;
+}
+#l12 {
+ padding-left: 0pt;
+ counter-reset: e5 1;
+}
+#l12 > li > *:first-child:before {
+ counter-increment: e5;
+ content: "(" counter(e5, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l12 > li:first-child > *:first-child:before {
+ counter-increment: e5 0;
+}
+#l13 {
+ padding-left: 0pt;
+ counter-reset: e4 1;
+}
+#l13 > li > *:first-child:before {
+ counter-increment: e4;
+ content: "(" counter(e4, upper-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l13 > li:first-child > *:first-child:before {
+ counter-increment: e4 0;
+}
+#l14 {
+ padding-left: 0pt;
+ counter-reset: e5 1;
+}
+#l14 > li > *:first-child:before {
+ counter-increment: e5;
+ content: "(" counter(e5, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l14 > li:first-child > *:first-child:before {
+ counter-increment: e5 0;
+}
+#l15 {
+ padding-left: 0pt;
+ counter-reset: e4 1;
+}
+#l15 > li > *:first-child:before {
+ counter-increment: e4;
+ content: "(" counter(e4, upper-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l15 > li:first-child > *:first-child:before {
+ counter-increment: e4 0;
+}
+#l16 {
+ padding-left: 0pt;
+ counter-reset: e5 1;
+}
+#l16 > li > *:first-child:before {
+ counter-increment: e5;
+ content: "(" counter(e5, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l16 > li:first-child > *:first-child:before {
+ counter-increment: e5 0;
+}
+li {
+ display: block;
+}
+#l17 {
+ padding-left: 0pt;
+ counter-reset: f1 3;
+}
+#l17 > li > *:first-child:before {
+ counter-increment: f1;
+ content: "(" counter(f1, lower-latin) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l17 > li:first-child > *:first-child:before {
+ counter-increment: f1 0;
+}
+#l18 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l18 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l18 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l19 {
+ padding-left: 0pt;
+ counter-reset: f3 1;
+}
+#l19 > li > *:first-child:before {
+ counter-increment: f3;
+ content: "(" counter(f3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l19 > li:first-child > *:first-child:before {
+ counter-increment: f3 0;
+}
+#l20 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l20 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l20 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l21 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l21 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l21 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l22 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l22 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l22 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l23 {
+ padding-left: 0pt;
+ counter-reset: f3 1;
+}
+#l23 > li > *:first-child:before {
+ counter-increment: f3;
+ content: "(" counter(f3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l23 > li:first-child > *:first-child:before {
+ counter-increment: f3 0;
+}
+#l24 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l24 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l24 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l25 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l25 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l25 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l26 {
+ padding-left: 0pt;
+ counter-reset: f2 1;
+}
+#l26 > li > *:first-child:before {
+ counter-increment: f2;
+ content: "(" counter(f2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l26 > li:first-child > *:first-child:before {
+ counter-increment: f2 0;
+}
+#l27 {
+ padding-left: 0pt;
+ counter-reset: f3 1;
+}
+#l27 > li > *:first-child:before {
+ counter-increment: f3;
+ content: "(" counter(f3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l27 > li:first-child > *:first-child:before {
+ counter-increment: f3 0;
+}
+li {
+ display: block;
+}
+#l28 {
+ padding-left: 0pt;
+}
+#l28 > li > *:first-child:before {
+ content: "• ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 13pt;
+}
+li {
+ display: block;
+}
+#l29 {
+ padding-left: 0pt;
+ counter-reset: h1 1;
+}
+#l29 > li > *:first-child:before {
+ counter-increment: h1;
+ content: "(" counter(h1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l29 > li:first-child > *:first-child:before {
+ counter-increment: h1 0;
+}
+li {
+ display: block;
+}
+#l30 {
+ padding-left: 0pt;
+ counter-reset: i1 1;
+}
+#l30 > li > *:first-child:before {
+ counter-increment: i1;
+ content: "(" counter(i1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l30 > li:first-child > *:first-child:before {
+ counter-increment: i1 0;
+}
+li {
+ display: block;
+}
+#l31 {
+ padding-left: 0pt;
+ counter-reset: j1 1;
+}
+#l31 > li > *:first-child:before {
+ counter-increment: j1;
+ content: "(" counter(j1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l31 > li:first-child > *:first-child:before {
+ counter-increment: j1 0;
+}
+li {
+ display: block;
+}
+#l32 {
+ padding-left: 0pt;
+ counter-reset: k1 1;
+}
+#l32 > li > *:first-child:before {
+ counter-increment: k1;
+ content: "(" counter(k1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l32 > li:first-child > *:first-child:before {
+ counter-increment: k1 0;
+}
+li {
+ display: block;
+}
+#l33 {
+ padding-left: 0pt;
+ counter-reset: l1 1;
+}
+#l33 > li > *:first-child:before {
+ counter-increment: l1;
+ content: "(" counter(l1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l33 > li:first-child > *:first-child:before {
+ counter-increment: l1 0;
+}
+#l34 {
+ padding-left: 0pt;
+ counter-reset: l2 1;
+}
+#l34 > li > *:first-child:before {
+ counter-increment: l2;
+ content: "(" counter(l2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l34 > li:first-child > *:first-child:before {
+ counter-increment: l2 0;
+}
+#l35 {
+ padding-left: 0pt;
+ counter-reset: l3 1;
+}
+#l35 > li > *:first-child:before {
+ counter-increment: l3;
+ content: "(" counter(l3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l35 > li:first-child > *:first-child:before {
+ counter-increment: l3 0;
+}
+#l36 {
+ padding-left: 0pt;
+ counter-reset: l2 1;
+}
+#l36 > li > *:first-child:before {
+ counter-increment: l2;
+ content: "(" counter(l2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l36 > li:first-child > *:first-child:before {
+ counter-increment: l2 0;
+}
+#l37 {
+ padding-left: 0pt;
+ counter-reset: l2 1;
+}
+#l37 > li > *:first-child:before {
+ counter-increment: l2;
+ content: "(" counter(l2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l37 > li:first-child > *:first-child:before {
+ counter-increment: l2 0;
+}
+#l38 {
+ padding-left: 0pt;
+ counter-reset: l2 1;
+}
+#l38 > li > *:first-child:before {
+ counter-increment: l2;
+ content: "(" counter(l2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l38 > li:first-child > *:first-child:before {
+ counter-increment: l2 0;
+}
+#l39 {
+ padding-left: 0pt;
+ counter-reset: l3 1;
+}
+#l39 > li > *:first-child:before {
+ counter-increment: l3;
+ content: "(" counter(l3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l39 > li:first-child > *:first-child:before {
+ counter-increment: l3 0;
+}
+#l40 {
+ padding-left: 0pt;
+ counter-reset: l4 1;
+}
+#l40 > li > *:first-child:before {
+ counter-increment: l4;
+ content: "(" counter(l4, upper-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l40 > li:first-child > *:first-child:before {
+ counter-increment: l4 0;
+}
+#l41 {
+ padding-left: 0pt;
+ counter-reset: l3 1;
+}
+#l41 > li > *:first-child:before {
+ counter-increment: l3;
+ content: "(" counter(l3, lower-roman) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l41 > li:first-child > *:first-child:before {
+ counter-increment: l3 0;
+}
+li {
+ display: block;
+}
+#l42 {
+ padding-left: 0pt;
+ counter-reset: m1 1;
+}
+#l42 > li > *:first-child:before {
+ counter-increment: m1;
+ content: "(" counter(m1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l42 > li:first-child > *:first-child:before {
+ counter-increment: m1 0;
+}
+#l43 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l43 > li > *:first-child:before {
+ counter-increment: m2;
+ content: "(" counter(m2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l43 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l44 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l44 > li > *:first-child:before {
+ counter-increment: m2;
+ content: "(" counter(m2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l44 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+li {
+ display: block;
+}
+#l45 {
+ padding-left: 0pt;
+ counter-reset: n1 1;
+}
+#l45 > li > *:first-child:before {
+ counter-increment: n1;
+ content: "(" counter(n1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l45 > li:first-child > *:first-child:before {
+ counter-increment: n1 0;
+}
+#l46 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l46 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l46 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l47 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l47 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l47 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l48 {
+ padding-left: 0pt;
+ counter-reset: n3 1;
+}
+#l48 > li > *:first-child:before {
+ counter-increment: n3;
+ content: "(" counter(n3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l48 > li:first-child > *:first-child:before {
+ counter-increment: n3 0;
+}
+#l49 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l49 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l49 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l50 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l50 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l50 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l51 {
+ padding-left: 0pt;
+ counter-reset: n3 1;
+}
+#l51 > li > *:first-child:before {
+ counter-increment: n3;
+ content: "(" counter(n3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l51 > li:first-child > *:first-child:before {
+ counter-increment: n3 0;
+}
+#l52 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l52 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l52 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l53 {
+ padding-left: 0pt;
+ counter-reset: n3 1;
+}
+#l53 > li > *:first-child:before {
+ counter-increment: n3;
+ content: "(" counter(n3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l53 > li:first-child > *:first-child:before {
+ counter-increment: n3 0;
+}
+#l54 {
+ padding-left: 0pt;
+ counter-reset: n2 1;
+}
+#l54 > li > *:first-child:before {
+ counter-increment: n2;
+ content: "(" counter(n2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l54 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l55 {
+ padding-left: 0pt;
+ counter-reset: n3 1;
+}
+#l55 > li > *:first-child:before {
+ counter-increment: n3;
+ content: "(" counter(n3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l55 > li:first-child > *:first-child:before {
+ counter-increment: n3 0;
+}
+li {
+ display: block;
+}
+#l56 {
+ padding-left: 0pt;
+ counter-reset: o1 1;
+}
+#l56 > li > *:first-child:before {
+ counter-increment: o1;
+ content: "(" counter(o1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l56 > li:first-child > *:first-child:before {
+ counter-increment: o1 0;
+}
+#l57 {
+ padding-left: 0pt;
+ counter-reset: o2 1;
+}
+#l57 > li > *:first-child:before {
+ counter-increment: o2;
+ content: "(" counter(o2, decimal) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l57 > li:first-child > *:first-child:before {
+ counter-increment: o2 0;
+}
+#l58 {
+ padding-left: 0pt;
+ counter-reset: o3 1;
+}
+#l58 > li > *:first-child:before {
+ counter-increment: o3;
+ content: "(" counter(o3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l58 > li:first-child > *:first-child:before {
+ counter-increment: o3 0;
+}
+li {
+ display: block;
+}
+#l59 {
+ padding-left: 0pt;
+ counter-reset: p1 1;
+}
+#l59 > li > *:first-child:before {
+ counter-increment: p1;
+ content: "(" counter(p1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l59 > li:first-child > *:first-child:before {
+ counter-increment: p1 0;
+}
+li {
+ display: block;
+}
+#l60 {
+ padding-left: 0pt;
+ counter-reset: q1 1;
+}
+#l60 > li > *:first-child:before {
+ counter-increment: q1;
+ content: "(" counter(q1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l60 > li:first-child > *:first-child:before {
+ counter-increment: q1 0;
+}
+#l61 {
+ padding-left: 0pt;
+ counter-reset: q2 1;
+}
+#l61 > li > *:first-child:before {
+ counter-increment: q2;
+ content: "(" counter(q2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l61 > li:first-child > *:first-child:before {
+ counter-increment: q2 0;
+}
+#l62 {
+ padding-left: 0pt;
+ counter-reset: q3 1;
+}
+#l62 > li > *:first-child:before {
+ counter-increment: q3;
+ content: "(" counter(q3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l62 > li:first-child > *:first-child:before {
+ counter-increment: q3 0;
+}
+#l63 {
+ padding-left: 0pt;
+ counter-reset: q2 1;
+}
+#l63 > li > *:first-child:before {
+ counter-increment: q2;
+ content: "(" counter(q2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l63 > li:first-child > *:first-child:before {
+ counter-increment: q2 0;
+}
+#l64 {
+ padding-left: 0pt;
+ counter-reset: q3 1;
+}
+#l64 > li > *:first-child:before {
+ counter-increment: q3;
+ content: "(" counter(q3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l64 > li:first-child > *:first-child:before {
+ counter-increment: q3 0;
+}
+#l65 {
+ padding-left: 0pt;
+ counter-reset: q2 1;
+}
+#l65 > li > *:first-child:before {
+ counter-increment: q2;
+ content: "(" counter(q2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l65 > li:first-child > *:first-child:before {
+ counter-increment: q2 0;
+}
+#l66 {
+ padding-left: 0pt;
+ counter-reset: q2 1;
+}
+#l66 > li > *:first-child:before {
+ counter-increment: q2;
+ content: "(" counter(q2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l66 > li:first-child > *:first-child:before {
+ counter-increment: q2 0;
+}
+#l67 {
+ padding-left: 0pt;
+ counter-reset: q2 1;
+}
+#l67 > li > *:first-child:before {
+ counter-increment: q2;
+ content: "(" counter(q2, decimal) ") ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l67 > li:first-child > *:first-child:before {
+ counter-increment: q2 0;
+}
+#l68 {
+ padding-left: 0pt;
+ counter-reset: q3 1;
+}
+#l68 > li > *:first-child:before {
+ counter-increment: q3;
+ content: "(" counter(q3, lower-roman) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l68 > li:first-child > *:first-child:before {
+ counter-increment: q3 0;
+}
+li {
+ display: block;
+}
+#l69 {
+ padding-left: 0pt;
+ counter-reset: r1 201;
+}
+#l69 > li > *:first-child:before {
+ counter-increment: r1;
+ content: counter(r1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l69 > li:first-child > *:first-child:before {
+ counter-increment: r1 0;
+}
+li {
+ display: block;
+}
+#l70 {
+ padding-left: 0pt;
+ counter-reset: s1 301;
+}
+#l70 > li > *:first-child:before {
+ counter-increment: s1;
+ content: counter(s1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l70 > li:first-child > *:first-child:before {
+ counter-increment: s1 0;
+}
+li {
+ display: block;
+}
+#l71 {
+ padding-left: 0pt;
+ counter-reset: t1 401;
+}
+#l71 > li > *:first-child:before {
+ counter-increment: t1;
+ content: counter(t1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l71 > li:first-child > *:first-child:before {
+ counter-increment: t1 0;
+}
+li {
+ display: block;
+}
+#l72 {
+ padding-left: 0pt;
+ counter-reset: u1 501;
+}
+#l72 > li > *:first-child:before {
+ counter-increment: u1;
+ content: counter(u1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l72 > li:first-child > *:first-child:before {
+ counter-increment: u1 0;
+}
+li {
+ display: block;
+}
+#l73 {
+ padding-left: 0pt;
+ counter-reset: v1 601;
+}
+#l73 > li > *:first-child:before {
+ counter-increment: v1;
+ content: counter(v1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l73 > li:first-child > *:first-child:before {
+ counter-increment: v1 0;
+}
+li {
+ display: block;
+}
+#l74 {
+ padding-left: 0pt;
+ counter-reset: w1 701;
+}
+#l74 > li > *:first-child:before {
+ counter-increment: w1;
+ content: counter(w1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l74 > li:first-child > *:first-child:before {
+ counter-increment: w1 0;
+}
+li {
+ display: block;
+}
+#l75 {
+ padding-left: 0pt;
+ counter-reset: x1 801;
+}
+#l75 > li > *:first-child:before {
+ counter-increment: x1;
+ content: counter(x1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l75 > li:first-child > *:first-child:before {
+ counter-increment: x1 0;
+}
+li {
+ display: block;
+}
+#l76 {
+ padding-left: 0pt;
+ counter-reset: y1 101;
+}
+#l76 > li > *:first-child:before {
+ counter-increment: y1;
+ content: counter(y1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l76 > li:first-child > *:first-child:before {
+ counter-increment: y1 0;
+}
+#l77 {
+ padding-left: 0pt;
+ counter-reset: y2 1;
+}
+#l77 > li > *:first-child:before {
+ counter-increment: y2;
+ content: counter(y1, decimal) "." counter(y2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l77 > li:first-child > *:first-child:before {
+ counter-increment: y2 0;
+}
+#l78 {
+ padding-left: 0pt;
+ counter-reset: y2 1;
+}
+#l78 > li > *:first-child:before {
+ counter-increment: y2;
+ content: counter(y1, decimal) "." counter(y2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l78 > li:first-child > *:first-child:before {
+ counter-increment: y2 0;
+}
+#l79 {
+ padding-left: 0pt;
+ counter-reset: y3 1;
+}
+#l79 > li > *:first-child:before {
+ counter-increment: y3;
+ content: counter(y1, decimal) "." counter(y2, decimal) "."
+   counter(y3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l79 > li:first-child > *:first-child:before {
+ counter-increment: y3 0;
+}
+#l80 {
+ padding-left: 0pt;
+ counter-reset: y2 1;
+}
+#l80 > li > *:first-child:before {
+ counter-increment: y2;
+ content: counter(y1, decimal) "." counter(y2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l80 > li:first-child > *:first-child:before {
+ counter-increment: y2 0;
+}
+#l81 {
+ padding-left: 0pt;
+ counter-reset: y3 1;
+}
+#l81 > li > *:first-child:before {
+ counter-increment: y3;
+ content: counter(y1, decimal) "." counter(y2, decimal) "."
+   counter(y3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l81 > li:first-child > *:first-child:before {
+ counter-increment: y3 0;
+}
+#l82 {
+ padding-left: 0pt;
+ counter-reset: y2 1;
+}
+#l82 > li > *:first-child:before {
+ counter-increment: y2;
+ content: counter(y1, decimal) "." counter(y2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l82 > li:first-child > *:first-child:before {
+ counter-increment: y2 0;
+}
+li {
+ display: block;
+}
+#l83 {
+ padding-left: 0pt;
+ counter-reset: z1 201;
+}
+#l83 > li > *:first-child:before {
+ counter-increment: z1;
+ content: counter(z1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l83 > li:first-child > *:first-child:before {
+ counter-increment: z1 0;
+}
+#l84 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l84 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l84 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l85 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l85 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l85 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l86 {
+ padding-left: 0pt;
+ counter-reset: c1 2;
+}
+#l86 > li > *:first-child:before {
+ counter-increment: c1;
+ content: counter(c1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l86 > li:first-child > *:first-child:before {
+ counter-increment: c1 0;
+}
+#l87 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l87 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l87 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l88 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l88 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l88 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l89 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l89 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l89 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l90 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l90 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l90 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l91 {
+ padding-left: 0pt;
+ counter-reset: d1 2;
+}
+#l91 > li > *:first-child:before {
+ counter-increment: d1;
+ content: counter(d1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l91 > li:first-child > *:first-child:before {
+ counter-increment: d1 0;
+}
+#l92 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l92 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l92 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l93 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l93 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l93 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l94 {
+ padding-left: 0pt;
+ counter-reset: e1 2;
+}
+#l94 > li > *:first-child:before {
+ counter-increment: e1;
+ content: counter(e1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l94 > li:first-child > *:first-child:before {
+ counter-increment: e1 0;
+}
+#l95 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l95 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l95 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l96 {
+ padding-left: 0pt;
+ counter-reset: f1 2;
+}
+#l96 > li > *:first-child:before {
+ counter-increment: f1;
+ content: counter(f1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l96 > li:first-child > *:first-child:before {
+ counter-increment: f1 0;
+}
+#l97 {
+ padding-left: 0pt;
+ counter-reset: g1 2;
+}
+#l97 > li > *:first-child:before {
+ counter-increment: g1;
+ content: counter(g1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l97 > li:first-child > *:first-child:before {
+ counter-increment: g1 0;
+}
+#l98 {
+ padding-left: 0pt;
+ counter-reset: h1 2;
+}
+#l98 > li > *:first-child:before {
+ counter-increment: h1;
+ content: counter(h1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l98 > li:first-child > *:first-child:before {
+ counter-increment: h1 0;
+}
+#l99 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l99 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l99 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l100 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l100 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l100 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l101 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l101 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l101 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l102 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l102 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l102 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l103 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l103 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l103 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l104 {
+ padding-left: 0pt;
+ counter-reset: i1 206;
+}
+#l104 > li > *:first-child:before {
+ counter-increment: i1;
+ content: counter(i1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l104 > li:first-child > *:first-child:before {
+ counter-increment: i1 0;
+}
+#l105 {
+ padding-left: 0pt;
+ counter-reset: i2 7;
+}
+#l105 > li > *:first-child:before {
+ counter-increment: i2;
+ content: counter(i1, decimal) "." counter(i2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l105 > li:first-child > *:first-child:before {
+ counter-increment: i2 0;
+}
+#l106 {
+ padding-left: 0pt;
+ counter-reset: i3 1;
+}
+#l106 > li > *:first-child:before {
+ counter-increment: i3;
+ content: counter(i1, decimal) "." counter(i2, decimal) "."
+   counter(i3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l106 > li:first-child > *:first-child:before {
+ counter-increment: i3 0;
+}
+#l107 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l107 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l107 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l108 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l108 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l108 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l109 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l109 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l109 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l110 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l110 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l110 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l111 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l111 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l111 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l112 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l112 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l112 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l113 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l113 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l113 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l114 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l114 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l114 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l115 {
+ padding-left: 0pt;
+ counter-reset: j1 2;
+}
+#l115 > li > *:first-child:before {
+ counter-increment: j1;
+ content: counter(j1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l115 > li:first-child > *:first-child:before {
+ counter-increment: j1 0;
+}
+#l116 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l116 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l116 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l117 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l117 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l117 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l118 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l118 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l118 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l119 {
+ padding-left: 0pt;
+ counter-reset: k1 2;
+}
+#l119 > li > *:first-child:before {
+ counter-increment: k1;
+ content: counter(k1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l119 > li:first-child > *:first-child:before {
+ counter-increment: k1 0;
+}
+#l120 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l120 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l120 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l121 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l121 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l121 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l122 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l122 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l122 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l123 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l123 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l123 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l124 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l124 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l124 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l125 {
+ padding-left: 0pt;
+ counter-reset: l1 2;
+}
+#l125 > li > *:first-child:before {
+ counter-increment: l1;
+ content: counter(l1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l125 > li:first-child > *:first-child:before {
+ counter-increment: l1 0;
+}
+#l126 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l126 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l126 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l127 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l127 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l127 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l128 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l128 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l128 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l129 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l129 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l129 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l130 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l130 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l130 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l131 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l131 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l131 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l132 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l132 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l132 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l133 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l133 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l133 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l134 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l134 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l134 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l135 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l135 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l135 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l136 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l136 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l136 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l137 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l137 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l137 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l138 {
+ padding-left: 0pt;
+ counter-reset: m1 221;
+}
+#l138 > li > *:first-child:before {
+ counter-increment: m1;
+ content: counter(m1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l138 > li:first-child > *:first-child:before {
+ counter-increment: m1 0;
+}
+#l139 {
+ padding-left: 0pt;
+ counter-reset: m2 2;
+}
+#l139 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l139 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l140 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l140 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l140 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l141 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l141 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l141 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l142 {
+ padding-left: 0pt;
+ counter-reset: z5 2;
+}
+#l142 > li > *:first-child:before {
+ counter-increment: z5;
+ content: counter(z5, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l142 > li:first-child > *:first-child:before {
+ counter-increment: z5 0;
+}
+#l143 {
+ padding-left: 0pt;
+ counter-reset: z5 2;
+}
+#l143 > li > *:first-child:before {
+ counter-increment: z5;
+ content: counter(z5, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l143 > li:first-child > *:first-child:before {
+ counter-increment: z5 0;
+}
+#l144 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l144 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l144 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l145 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l145 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l145 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l146 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l146 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l146 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l147 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l147 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l147 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l148 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l148 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l148 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l149 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l149 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l149 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l150 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l150 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l150 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l151 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l151 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l151 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l152 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l152 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l152 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l153 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l153 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l153 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l154 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l154 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l154 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l155 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l155 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l155 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l156 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l156 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l156 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l157 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l157 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l157 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l158 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l158 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l158 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l159 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l159 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l159 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l160 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l160 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l160 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l161 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l161 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l161 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l162 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l162 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l162 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l163 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l163 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l163 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l164 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l164 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l164 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l165 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l165 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l165 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l166 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l166 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l166 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l167 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l167 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l167 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l168 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l168 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l168 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l169 {
+ padding-left: 0pt;
+ counter-reset: n1 233;
+}
+#l169 > li > *:first-child:before {
+ counter-increment: n1;
+ content: counter(n1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l169 > li:first-child > *:first-child:before {
+ counter-increment: n1 0;
+}
+#l170 {
+ padding-left: 0pt;
+ counter-reset: n2 3;
+}
+#l170 > li > *:first-child:before {
+ counter-increment: n2;
+ content: counter(n1, decimal) "." counter(n2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l170 > li:first-child > *:first-child:before {
+ counter-increment: n2 0;
+}
+#l171 {
+ padding-left: 0pt;
+ counter-reset: n3 1;
+}
+#l171 > li > *:first-child:before {
+ counter-increment: n3;
+ content: counter(n1, decimal) "." counter(n2, decimal) "."
+   counter(n3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l171 > li:first-child > *:first-child:before {
+ counter-increment: n3 0;
+}
+#l172 {
+ padding-left: 0pt;
+ counter-reset: n4 1;
+}
+#l172 > li > *:first-child:before {
+ counter-increment: n4;
+ content: counter(n1, decimal) "." counter(n2, decimal) "."
+   counter(n3, decimal) "." counter(n4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l172 > li:first-child > *:first-child:before {
+ counter-increment: n4 0;
+}
+#l173 {
+ padding-left: 0pt;
+ counter-reset: o1 233;
+}
+#l173 > li > *:first-child:before {
+ counter-increment: o1;
+ content: counter(o1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l173 > li:first-child > *:first-child:before {
+ counter-increment: o1 0;
+}
+#l174 {
+ padding-left: 0pt;
+ counter-reset: o2 3;
+}
+#l174 > li > *:first-child:before {
+ counter-increment: o2;
+ content: counter(o1, decimal) "." counter(o2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l174 > li:first-child > *:first-child:before {
+ counter-increment: o2 0;
+}
+#l175 {
+ padding-left: 0pt;
+ counter-reset: o3 1;
+}
+#l175 > li > *:first-child:before {
+ counter-increment: o3;
+ content: counter(o1, decimal) "." counter(o2, decimal) "."
+   counter(o3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l175 > li:first-child > *:first-child:before {
+ counter-increment: o3 0;
+}
+#l176 {
+ padding-left: 0pt;
+ counter-reset: o4 1;
+}
+#l176 > li > *:first-child:before {
+ counter-increment: o4;
+ content: counter(o1, decimal) "." counter(o2, decimal) "."
+   counter(o3, decimal) "." counter(o4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l176 > li:first-child > *:first-child:before {
+ counter-increment: o4 0;
+}
+#l177 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l177 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l177 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+#l178 {
+ padding-left: 0pt;
+ counter-reset: p1 233;
+}
+#l178 > li > *:first-child:before {
+ counter-increment: p1;
+ content: counter(p1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l178 > li:first-child > *:first-child:before {
+ counter-increment: p1 0;
+}
+#l179 {
+ padding-left: 0pt;
+ counter-reset: p2 3;
+}
+#l179 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l179 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l180 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l180 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l180 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l181 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l181 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l181 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l182 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l182 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l182 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l183 {
+ padding-left: 0pt;
+ counter-reset: q1 2;
+}
+#l183 > li > *:first-child:before {
+ counter-increment: q1;
+ content: counter(q1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l183 > li:first-child > *:first-child:before {
+ counter-increment: q1 0;
+}
+#l184 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l184 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l184 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l185 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l185 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l185 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l186 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l186 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l186 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l187 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l187 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l187 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l188 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l188 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l188 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l189 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l189 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l189 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l190 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l190 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l190 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l191 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l191 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l191 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l192 {
+ padding-left: 0pt;
+ counter-reset: z2 1;
+}
+#l192 > li > *:first-child:before {
+ counter-increment: z2;
+ content: counter(z1, decimal) "." counter(z2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l192 > li:first-child > *:first-child:before {
+ counter-increment: z2 0;
+}
+#l193 {
+ padding-left: 0pt;
+ counter-reset: r1 2;
+}
+#l193 > li > *:first-child:before {
+ counter-increment: r1;
+ content: counter(r1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l193 > li:first-child > *:first-child:before {
+ counter-increment: r1 0;
+}
+#l194 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l194 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l194 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l195 {
+ padding-left: 0pt;
+ counter-reset: z3 1;
+}
+#l195 > li > *:first-child:before {
+ counter-increment: z3;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l195 > li:first-child > *:first-child:before {
+ counter-increment: z3 0;
+}
+#l196 {
+ padding-left: 0pt;
+ counter-reset: z4 1;
+}
+#l196 > li > *:first-child:before {
+ counter-increment: z4;
+ content: counter(z1, decimal) "." counter(z2, decimal) "."
+   counter(z3, decimal) "." counter(z4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l196 > li:first-child > *:first-child:before {
+ counter-increment: z4 0;
+}
+li {
+ display: block;
+}
+#l197 {
+ padding-left: 0pt;
+ counter-reset: s1 241;
+}
+#l197 > li > *:first-child:before {
+ counter-increment: s1;
+ content: counter(s1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l197 > li:first-child > *:first-child:before {
+ counter-increment: s1 0;
+}
+#l198 {
+ padding-left: 0pt;
+ counter-reset: s2 1;
+}
+#l198 > li > *:first-child:before {
+ counter-increment: s2;
+ content: counter(s1, decimal) "." counter(s2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l198 > li:first-child > *:first-child:before {
+ counter-increment: s2 0;
+}
+#l199 {
+ padding-left: 0pt;
+ counter-reset: s3 2;
+}
+#l199 > li > *:first-child:before {
+ counter-increment: s3;
+ content: counter(s3, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l199 > li:first-child > *:first-child:before {
+ counter-increment: s3 0;
+}
+#l200 {
+ padding-left: 0pt;
+ counter-reset: s2 1;
+}
+#l200 > li > *:first-child:before {
+ counter-increment: s2;
+ content: counter(s1, decimal) "." counter(s2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l200 > li:first-child > *:first-child:before {
+ counter-increment: s2 0;
+}
+li {
+ display: block;
+}
+#l201 {
+ padding-left: 0pt;
+ counter-reset: t1 301;
+}
+#l201 > li > *:first-child:before {
+ counter-increment: t1;
+ content: counter(t1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l201 > li:first-child > *:first-child:before {
+ counter-increment: t1 0;
+}
+#l202 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l202 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l202 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l203 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l203 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l203 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l204 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l204 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l204 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l205 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l205 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l205 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l206 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l206 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l206 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l207 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l207 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l207 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l208 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l208 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l208 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l209 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l209 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l209 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l210 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l210 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l210 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l211 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l211 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l211 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l212 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l212 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l212 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l213 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l213 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l213 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+#l214 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l214 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l214 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l215 {
+ padding-left: 0pt;
+ counter-reset: t3 1;
+}
+#l215 > li > *:first-child:before {
+ counter-increment: t3;
+ content: counter(t1, decimal) "." counter(t2, decimal) "."
+   counter(t3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l215 > li:first-child > *:first-child:before {
+ counter-increment: t3 0;
+}
+#l216 {
+ padding-left: 0pt;
+ counter-reset: t4 2;
+}
+#l216 > li > *:first-child:before {
+ counter-increment: t4;
+ content: counter(t4, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l216 > li:first-child > *:first-child:before {
+ counter-increment: t4 0;
+}
+#l217 {
+ padding-left: 0pt;
+ counter-reset: t4 2;
+}
+#l217 > li > *:first-child:before {
+ counter-increment: t4;
+ content: counter(t4, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l217 > li:first-child > *:first-child:before {
+ counter-increment: t4 0;
+}
+#l218 {
+ padding-left: 0pt;
+ counter-reset: t2 1;
+}
+#l218 > li > *:first-child:before {
+ counter-increment: t2;
+ content: counter(t1, decimal) "." counter(t2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l218 > li:first-child > *:first-child:before {
+ counter-increment: t2 0;
+}
+li {
+ display: block;
+}
+#l219 {
+ padding-left: 0pt;
+ counter-reset: u1 401;
+}
+#l219 > li > *:first-child:before {
+ counter-increment: u1;
+ content: counter(u1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l219 > li:first-child > *:first-child:before {
+ counter-increment: u1 0;
+}
+#l220 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l220 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l220 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l221 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l221 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l221 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l222 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l222 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l222 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l223 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l223 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l223 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l224 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l224 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l224 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l225 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l225 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l225 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l226 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l226 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l226 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l227 {
+ padding-left: 0pt;
+ counter-reset: v1 1;
+}
+#l227 > li > *:first-child:before {
+ counter-increment: v1;
+ content: counter(v1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l227 > li:first-child > *:first-child:before {
+ counter-increment: v1 0;
+}
+#l228 {
+ padding-left: 0pt;
+ counter-reset: w1 1;
+}
+#l228 > li > *:first-child:before {
+ counter-increment: w1;
+ content: counter(w1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l228 > li:first-child > *:first-child:before {
+ counter-increment: w1 0;
+}
+#l229 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l229 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l229 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l230 {
+ padding-left: 0pt;
+ counter-reset: x1 1;
+}
+#l230 > li > *:first-child:before {
+ counter-increment: x1;
+ content: counter(x1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l230 > li:first-child > *:first-child:before {
+ counter-increment: x1 0;
+}
+#l231 {
+ padding-left: 0pt;
+ counter-reset: y1 2;
+}
+#l231 > li > *:first-child:before {
+ counter-increment: y1;
+ content: counter(y1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l231 > li:first-child > *:first-child:before {
+ counter-increment: y1 0;
+}
+#l232 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l232 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l232 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l233 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l233 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l233 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l234 {
+ padding-left: 0pt;
+ counter-reset: z1 1;
+}
+#l234 > li > *:first-child:before {
+ counter-increment: z1;
+ content: counter(z1, decimal) ". ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l234 > li:first-child > *:first-child:before {
+ counter-increment: z1 0;
+}
+#l235 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l235 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l235 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l236 {
+ padding-left: 0pt;
+ counter-reset: z1 2;
+}
+#l236 > li > *:first-child:before {
+ counter-increment: z1;
+ content: counter(z1, decimal) ". ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l236 > li:first-child > *:first-child:before {
+ counter-increment: z1 0;
+}
+#l237 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l237 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l237 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l238 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l238 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l238 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l239 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l239 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l239 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l240 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l240 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l240 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l241 {
+ padding-left: 0pt;
+ counter-reset: c1 407;
+}
+#l241 > li > *:first-child:before {
+ counter-increment: c1;
+ content: counter(c1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l241 > li:first-child > *:first-child:before {
+ counter-increment: c1 0;
+}
+#l242 {
+ padding-left: 0pt;
+ counter-reset: c2 2;
+}
+#l242 > li > *:first-child:before {
+ counter-increment: c2;
+ content: counter(c1, decimal) "." counter(c2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l242 > li:first-child > *:first-child:before {
+ counter-increment: c2 0;
+}
+#l243 {
+ padding-left: 0pt;
+ counter-reset: c3 1;
+}
+#l243 > li > *:first-child:before {
+ counter-increment: c3;
+ content: counter(c1, decimal) "." counter(c2, decimal) "."
+   counter(c3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l243 > li:first-child > *:first-child:before {
+ counter-increment: c3 0;
+}
+#l244 {
+ padding-left: 0pt;
+ counter-reset: c4 1;
+}
+#l244 > li > *:first-child:before {
+ counter-increment: c4;
+ content: counter(c1, decimal) "." counter(c2, decimal) "."
+   counter(c3, decimal) "." counter(c4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l244 > li:first-child > *:first-child:before {
+ counter-increment: c4 0;
+}
+#l245 {
+ padding-left: 0pt;
+ counter-reset: c5 2;
+}
+#l245 > li > *:first-child:before {
+ counter-increment: c5;
+ content: counter(c5, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l245 > li:first-child > *:first-child:before {
+ counter-increment: c5 0;
+}
+#l246 {
+ padding-left: 0pt;
+ counter-reset: c4 1;
+}
+#l246 > li > *:first-child:before {
+ counter-increment: c4;
+ content: counter(c1, decimal) "." counter(c2, decimal) "."
+   counter(c3, decimal) "." counter(c4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l246 > li:first-child > *:first-child:before {
+ counter-increment: c4 0;
+}
+#l247 {
+ padding-left: 0pt;
+ counter-reset: c5 2;
+}
+#l247 > li > *:first-child:before {
+ counter-increment: c5;
+ content: counter(c5, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l247 > li:first-child > *:first-child:before {
+ counter-increment: c5 0;
+}
+#l248 {
+ padding-left: 0pt;
+ counter-reset: c5 2;
+}
+#l248 > li > *:first-child:before {
+ counter-increment: c5;
+ content: counter(c5, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l248 > li:first-child > *:first-child:before {
+ counter-increment: c5 0;
+}
+#l249 {
+ padding-left: 0pt;
+ counter-reset: c4 1;
+}
+#l249 > li > *:first-child:before {
+ counter-increment: c4;
+ content: counter(c1, decimal) "." counter(c2, decimal) "."
+   counter(c3, decimal) "." counter(c4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l249 > li:first-child > *:first-child:before {
+ counter-increment: c4 0;
+}
+#l250 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l250 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l250 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l251 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l251 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l251 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l252 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l252 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l252 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l253 {
+ padding-left: 0pt;
+ counter-reset: d1 1;
+}
+#l253 > li > *:first-child:before {
+ counter-increment: d1;
+ content: counter(d1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 10pt;
+}
+#l253 > li:first-child > *:first-child:before {
+ counter-increment: d1 0;
+}
+#l254 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l254 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l254 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l255 {
+ padding-left: 0pt;
+ counter-reset: u5 1;
+}
+#l255 > li > *:first-child:before {
+ counter-increment: u5;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) "." counter(u5, decimal)
+   " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l255 > li:first-child > *:first-child:before {
+ counter-increment: u5 0;
+}
+#l256 {
+ padding-left: 0pt;
+ counter-reset: u5 1;
+}
+#l256 > li > *:first-child:before {
+ counter-increment: u5;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) "." counter(u5, decimal)
+   " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l256 > li:first-child > *:first-child:before {
+ counter-increment: u5 0;
+}
+#l257 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l257 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l257 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l258 {
+ padding-left: 0pt;
+ counter-reset: u5 1;
+}
+#l258 > li > *:first-child:before {
+ counter-increment: u5;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) "." counter(u5, decimal)
+   " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l258 > li:first-child > *:first-child:before {
+ counter-increment: u5 0;
+}
+#l259 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l259 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l259 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l260 {
+ padding-left: 0pt;
+ counter-reset: u5 1;
+}
+#l260 > li > *:first-child:before {
+ counter-increment: u5;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) "." counter(u5, decimal)
+   " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l260 > li:first-child > *:first-child:before {
+ counter-increment: u5 0;
+}
+#l261 {
+ padding-left: 0pt;
+ counter-reset: u5 1;
+}
+#l261 > li > *:first-child:before {
+ counter-increment: u5;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) "." counter(u5, decimal)
+   " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l261 > li:first-child > *:first-child:before {
+ counter-increment: u5 0;
+}
+#l262 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l262 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l262 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l263 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l263 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l263 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l264 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l264 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l264 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l265 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l265 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l265 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l266 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l266 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l266 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l267 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l267 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l267 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+#l268 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l268 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l268 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l269 {
+ padding-left: 0pt;
+ counter-reset: u3 1;
+}
+#l269 > li > *:first-child:before {
+ counter-increment: u3;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l269 > li:first-child > *:first-child:before {
+ counter-increment: u3 0;
+}
+#l270 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l270 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l270 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l271 {
+ padding-left: 0pt;
+ counter-reset: u4 1;
+}
+#l271 > li > *:first-child:before {
+ counter-increment: u4;
+ content: counter(u1, decimal) "." counter(u2, decimal) "."
+   counter(u3, decimal) "." counter(u4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l271 > li:first-child > *:first-child:before {
+ counter-increment: u4 0;
+}
+#l272 {
+ padding-left: 0pt;
+ counter-reset: u2 1;
+}
+#l272 > li > *:first-child:before {
+ counter-increment: u2;
+ content: counter(u1, decimal) "." counter(u2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l272 > li:first-child > *:first-child:before {
+ counter-increment: u2 0;
+}
+li {
+ display: block;
+}
+#l273 {
+ padding-left: 0pt;
+ counter-reset: e1 501;
+}
+#l273 > li > *:first-child:before {
+ counter-increment: e1;
+ content: counter(e1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l273 > li:first-child > *:first-child:before {
+ counter-increment: e1 0;
+}
+#l274 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l274 > li > *:first-child:before {
+ counter-increment: e2;
+ content: counter(e1, decimal) "." counter(e2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l274 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l275 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l275 > li > *:first-child:before {
+ counter-increment: e2;
+ content: counter(e1, decimal) "." counter(e2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l275 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l276 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l276 > li > *:first-child:before {
+ counter-increment: e3;
+ content: counter(e1, decimal) "." counter(e2, decimal) "."
+   counter(e3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l276 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l277 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l277 > li > *:first-child:before {
+ counter-increment: e2;
+ content: counter(e1, decimal) "." counter(e2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l277 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l278 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l278 > li > *:first-child:before {
+ counter-increment: e3;
+ content: counter(e1, decimal) "." counter(e2, decimal) "."
+   counter(e3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l278 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l279 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l279 > li > *:first-child:before {
+ counter-increment: e2;
+ content: counter(e1, decimal) "." counter(e2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l279 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l280 {
+ padding-left: 0pt;
+ counter-reset: e2 1;
+}
+#l280 > li > *:first-child:before {
+ counter-increment: e2;
+ content: counter(e1, decimal) "." counter(e2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l280 > li:first-child > *:first-child:before {
+ counter-increment: e2 0;
+}
+#l281 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l281 > li > *:first-child:before {
+ counter-increment: e3;
+ content: counter(e1, decimal) "." counter(e2, decimal) "."
+   counter(e3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l281 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+#l282 {
+ padding-left: 0pt;
+ counter-reset: f1 2;
+}
+#l282 > li > *:first-child:before {
+ counter-increment: f1;
+ content: counter(f1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l282 > li:first-child > *:first-child:before {
+ counter-increment: f1 0;
+}
+#l283 {
+ padding-left: 0pt;
+ counter-reset: e3 1;
+}
+#l283 > li > *:first-child:before {
+ counter-increment: e3;
+ content: counter(e1, decimal) "." counter(e2, decimal) "."
+   counter(e3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l283 > li:first-child > *:first-child:before {
+ counter-increment: e3 0;
+}
+li {
+ display: block;
+}
+#l284 {
+ padding-left: 0pt;
+ counter-reset: g1 601;
+}
+#l284 > li > *:first-child:before {
+ counter-increment: g1;
+ content: counter(g1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l284 > li:first-child > *:first-child:before {
+ counter-increment: g1 0;
+}
+#l285 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l285 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l285 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l286 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l286 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l286 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l287 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l287 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l287 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l288 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l288 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l288 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l289 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l289 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l289 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l290 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l290 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l290 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l291 {
+ padding-left: 0pt;
+ counter-reset: h1 2;
+}
+#l291 > li > *:first-child:before {
+ counter-increment: h1;
+ content: counter(h1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l291 > li:first-child > *:first-child:before {
+ counter-increment: h1 0;
+}
+#l292 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l292 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l292 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l293 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l293 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l293 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l294 {
+ padding-left: 0pt;
+ counter-reset: i1 604;
+}
+#l294 > li > *:first-child:before {
+ counter-increment: i1;
+ content: counter(i1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l294 > li:first-child > *:first-child:before {
+ counter-increment: i1 0;
+}
+#l295 {
+ padding-left: 0pt;
+ counter-reset: i2 8;
+}
+#l295 > li > *:first-child:before {
+ counter-increment: i2;
+ content: counter(i1, decimal) "." counter(i2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l295 > li:first-child > *:first-child:before {
+ counter-increment: i2 0;
+}
+#l296 {
+ padding-left: 0pt;
+ counter-reset: i3 1;
+}
+#l296 > li > *:first-child:before {
+ counter-increment: i3;
+ content: counter(i1, decimal) "." counter(i2, decimal) "."
+   counter(i3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l296 > li:first-child > *:first-child:before {
+ counter-increment: i3 0;
+}
+#l297 {
+ padding-left: 0pt;
+ counter-reset: i4 1;
+}
+#l297 > li > *:first-child:before {
+ counter-increment: i4;
+ content: counter(i1, decimal) "." counter(i2, decimal) "."
+   counter(i3, decimal) "." counter(i4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l297 > li:first-child > *:first-child:before {
+ counter-increment: i4 0;
+}
+#l298 {
+ padding-left: 0pt;
+ counter-reset: j1 604;
+}
+#l298 > li > *:first-child:before {
+ counter-increment: j1;
+ content: counter(j1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l298 > li:first-child > *:first-child:before {
+ counter-increment: j1 0;
+}
+#l299 {
+ padding-left: 0pt;
+ counter-reset: j2 5;
+}
+#l299 > li > *:first-child:before {
+ counter-increment: j2;
+ content: counter(j1, decimal) "." counter(j2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l299 > li:first-child > *:first-child:before {
+ counter-increment: j2 0;
+}
+#l300 {
+ padding-left: 0pt;
+ counter-reset: j3 1;
+}
+#l300 > li > *:first-child:before {
+ counter-increment: j3;
+ content: counter(j1, decimal) "." counter(j2, decimal) "."
+   counter(j3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l300 > li:first-child > *:first-child:before {
+ counter-increment: j3 0;
+}
+#l301 {
+ padding-left: 0pt;
+ counter-reset: i4 1;
+}
+#l301 > li > *:first-child:before {
+ counter-increment: i4;
+ content: counter(i1, decimal) "." counter(i2, decimal) "."
+   counter(i3, decimal) "." counter(i4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l301 > li:first-child > *:first-child:before {
+ counter-increment: i4 0;
+}
+#l302 {
+ padding-left: 0pt;
+ counter-reset: k1 604;
+}
+#l302 > li > *:first-child:before {
+ counter-increment: k1;
+ content: counter(k1, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l302 > li:first-child > *:first-child:before {
+ counter-increment: k1 0;
+}
+#l303 {
+ padding-left: 0pt;
+ counter-reset: k2 5;
+}
+#l303 > li > *:first-child:before {
+ counter-increment: k2;
+ content: counter(k1, decimal) "." counter(k2, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l303 > li:first-child > *:first-child:before {
+ counter-increment: k2 0;
+}
+#l304 {
+ padding-left: 0pt;
+ counter-reset: k3 1;
+}
+#l304 > li > *:first-child:before {
+ counter-increment: k3;
+ content: counter(k1, decimal) "." counter(k2, decimal) "."
+   counter(k3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l304 > li:first-child > *:first-child:before {
+ counter-increment: k3 0;
+}
+#l305 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l305 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l305 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l306 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l306 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l306 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l307 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l307 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l307 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l308 {
+ padding-left: 0pt;
+ counter-reset: l1 2;
+}
+#l308 > li > *:first-child:before {
+ counter-increment: l1;
+ content: counter(l1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l308 > li:first-child > *:first-child:before {
+ counter-increment: l1 0;
+}
+#l309 {
+ padding-left: 0pt;
+ counter-reset: l2 1;
+}
+#l309 > li > *:first-child:before {
+ counter-increment: l2;
+ content: "(" counter(l2, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l309 > li:first-child > *:first-child:before {
+ counter-increment: l2 0;
+}
+#l310 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l310 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l310 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l311 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l311 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l311 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l312 {
+ padding-left: 0pt;
+ counter-reset: g4 1;
+}
+#l312 > li > *:first-child:before {
+ counter-increment: g4;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) "." counter(g4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l312 > li:first-child > *:first-child:before {
+ counter-increment: g4 0;
+}
+#l313 {
+ padding-left: 0pt;
+ counter-reset: g4 1;
+}
+#l313 > li > *:first-child:before {
+ counter-increment: g4;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) "." counter(g4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l313 > li:first-child > *:first-child:before {
+ counter-increment: g4 0;
+}
+#l314 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l314 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l314 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l315 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l315 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l315 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l316 {
+ padding-left: 0pt;
+ counter-reset: g4 1;
+}
+#l316 > li > *:first-child:before {
+ counter-increment: g4;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) "." counter(g4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l316 > li:first-child > *:first-child:before {
+ counter-increment: g4 0;
+}
+#l317 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l317 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l317 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l318 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l318 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l318 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l319 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l319 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l319 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l320 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l320 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l320 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l321 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l321 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l321 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l322 {
+ padding-left: 0pt;
+ counter-reset: g3 1;
+}
+#l322 > li > *:first-child:before {
+ counter-increment: g3;
+ content: counter(g1, decimal) "." counter(g2, decimal) "."
+   counter(g3, decimal) " ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l322 > li:first-child > *:first-child:before {
+ counter-increment: g3 0;
+}
+#l323 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l323 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l323 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+#l324 {
+ padding-left: 0pt;
+ counter-reset: g2 1;
+}
+#l324 > li > *:first-child:before {
+ counter-increment: g2;
+ content: counter(g1, decimal) "." counter(g2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l324 > li:first-child > *:first-child:before {
+ counter-increment: g2 0;
+}
+li {
+ display: block;
+}
+#l325 {
+ padding-left: 0pt;
+ counter-reset: m1 701;
+}
+#l325 > li > *:first-child:before {
+ counter-increment: m1;
+ content: counter(m1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l325 > li:first-child > *:first-child:before {
+ counter-increment: m1 0;
+}
+#l326 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l326 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l326 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l327 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l327 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l327 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l328 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l328 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l328 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l329 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l329 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l329 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l330 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l330 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l330 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l331 {
+ padding-left: 0pt;
+ counter-reset: n1 1;
+}
+#l331 > li > *:first-child:before {
+ counter-increment: n1;
+ content: counter(n1, decimal) ". ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l331 > li:first-child > *:first-child:before {
+ counter-increment: n1 0;
+}
+#l332 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l332 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l332 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l333 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l333 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l333 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l334 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l334 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l334 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l335 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l335 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l335 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l336 {
+ padding-left: 0pt;
+ counter-reset: m4 1;
+}
+#l336 > li > *:first-child:before {
+ counter-increment: m4;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) "." counter(m4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l336 > li:first-child > *:first-child:before {
+ counter-increment: m4 0;
+}
+#l337 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l337 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l337 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l338 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l338 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l338 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l339 {
+ padding-left: 0pt;
+ counter-reset: m4 1;
+}
+#l339 > li > *:first-child:before {
+ counter-increment: m4;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) "." counter(m4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l339 > li:first-child > *:first-child:before {
+ counter-increment: m4 0;
+}
+#l340 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l340 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l340 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l341 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l341 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l341 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l342 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l342 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l342 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l343 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l343 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l343 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l344 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l344 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l344 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l345 {
+ padding-left: 0pt;
+ counter-reset: n1 2;
+}
+#l345 > li > *:first-child:before {
+ counter-increment: n1;
+ content: counter(n1, decimal) ". ";
+ color: black;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+}
+#l345 > li:first-child > *:first-child:before {
+ counter-increment: n1 0;
+}
+#l346 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l346 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l346 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l347 {
+ padding-left: 0pt;
+ counter-reset: o1 2;
+}
+#l347 > li > *:first-child:before {
+ counter-increment: o1;
+ content: counter(o1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l347 > li:first-child > *:first-child:before {
+ counter-increment: o1 0;
+}
+#l348 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l348 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l348 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l349 {
+ padding-left: 0pt;
+ counter-reset: m4 1;
+}
+#l349 > li > *:first-child:before {
+ counter-increment: m4;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) "." counter(m4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l349 > li:first-child > *:first-child:before {
+ counter-increment: m4 0;
+}
+#l350 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l350 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l350 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+#l351 {
+ padding-left: 0pt;
+ counter-reset: m2 1;
+}
+#l351 > li > *:first-child:before {
+ counter-increment: m2;
+ content: counter(m1, decimal) "." counter(m2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l351 > li:first-child > *:first-child:before {
+ counter-increment: m2 0;
+}
+#l352 {
+ padding-left: 0pt;
+ counter-reset: m3 1;
+}
+#l352 > li > *:first-child:before {
+ counter-increment: m3;
+ content: counter(m1, decimal) "." counter(m2, decimal) "."
+   counter(m3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l352 > li:first-child > *:first-child:before {
+ counter-increment: m3 0;
+}
+li {
+ display: block;
+}
+#l353 {
+ padding-left: 0pt;
+ counter-reset: p1 801;
+}
+#l353 > li > *:first-child:before {
+ counter-increment: p1;
+ content: counter(p1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l353 > li:first-child > *:first-child:before {
+ counter-increment: p1 0;
+}
+#l354 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l354 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l354 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l355 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l355 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l355 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l356 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l356 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l356 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l357 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l357 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l357 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l358 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l358 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l358 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l359 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l359 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l359 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l360 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l360 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l360 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l361 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l361 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l361 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l362 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l362 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l362 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l363 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l363 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l363 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l364 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l364 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l364 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l365 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l365 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l365 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l366 {
+ padding-left: 0pt;
+ counter-reset: q1 1;
+}
+#l366 > li > *:first-child:before {
+ counter-increment: q1;
+ content: "(" counter(q1, lower-latin) ") ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l366 > li:first-child > *:first-child:before {
+ counter-increment: q1 0;
+}
+#l367 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l367 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l367 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l368 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l368 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l368 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l369 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l369 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l369 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l370 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l370 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l370 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l371 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l371 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l371 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l372 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l372 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l372 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l373 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l373 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l373 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l374 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l374 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l374 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l375 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l375 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l375 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l376 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l376 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l376 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l377 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l377 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l377 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l378 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l378 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l378 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l379 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l379 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l379 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l380 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l380 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l380 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l381 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l381 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l381 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l382 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l382 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l382 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l383 {
+ padding-left: 0pt;
+ counter-reset: p4 1;
+}
+#l383 > li > *:first-child:before {
+ counter-increment: p4;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) "." counter(p4, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l383 > li:first-child > *:first-child:before {
+ counter-increment: p4 0;
+}
+#l384 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l384 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l384 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+#l385 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l385 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l385 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l386 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l386 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l386 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l387 {
+ padding-left: 0pt;
+ counter-reset: p3 1;
+}
+#l387 > li > *:first-child:before {
+ counter-increment: p3;
+ content: counter(p1, decimal) "." counter(p2, decimal) "."
+   counter(p3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l387 > li:first-child > *:first-child:before {
+ counter-increment: p3 0;
+}
+#l388 {
+ padding-left: 0pt;
+ counter-reset: p2 1;
+}
+#l388 > li > *:first-child:before {
+ counter-increment: p2;
+ content: counter(p1, decimal) "." counter(p2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l388 > li:first-child > *:first-child:before {
+ counter-increment: p2 0;
+}
+li {
+ display: block;
+}
+#l389 {
+ padding-left: 0pt;
+ counter-reset: r1 901;
+}
+#l389 > li > *:first-child:before {
+ counter-increment: r1;
+ content: counter(r1, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l389 > li:first-child > *:first-child:before {
+ counter-increment: r1 0;
+}
+#l390 {
+ padding-left: 0pt;
+ counter-reset: r2 1;
+}
+#l390 > li > *:first-child:before {
+ counter-increment: r2;
+ content: counter(r1, decimal) "." counter(r2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l390 > li:first-child > *:first-child:before {
+ counter-increment: r2 0;
+}
+#l391 {
+ padding-left: 0pt;
+ counter-reset: r2 1;
+}
+#l391 > li > *:first-child:before {
+ counter-increment: r2;
+ content: counter(r1, decimal) "." counter(r2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l391 > li:first-child > *:first-child:before {
+ counter-increment: r2 0;
+}
+#l392 {
+ padding-left: 0pt;
+ counter-reset: r3 1;
+}
+#l392 > li > *:first-child:before {
+ counter-increment: r3;
+ content: counter(r1, decimal) "." counter(r2, decimal) "."
+   counter(r3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l392 > li:first-child > *:first-child:before {
+ counter-increment: r3 0;
+}
+#l393 {
+ padding-left: 0pt;
+ counter-reset: r2 1;
+}
+#l393 > li > *:first-child:before {
+ counter-increment: r2;
+ content: counter(r1, decimal) "." counter(r2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l393 > li:first-child > *:first-child:before {
+ counter-increment: r2 0;
+}
+#l394 {
+ padding-left: 0pt;
+ counter-reset: r2 1;
+}
+#l394 > li > *:first-child:before {
+ counter-increment: r2;
+ content: counter(r1, decimal) "." counter(r2, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l394 > li:first-child > *:first-child:before {
+ counter-increment: r2 0;
+}
+#l395 {
+ padding-left: 0pt;
+ counter-reset: r3 1;
+}
+#l395 > li > *:first-child:before {
+ counter-increment: r3;
+ content: counter(r1, decimal) "." counter(r2, decimal) "."
+   counter(r3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l395 > li:first-child > *:first-child:before {
+ counter-increment: r3 0;
+}
+#l396 {
+ padding-left: 0pt;
+ counter-reset: r3 1;
+}
+#l396 > li > *:first-child:before {
+ counter-increment: r3;
+ content: counter(r1, decimal) "." counter(r2, decimal) "."
+   counter(r3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l396 > li:first-child > *:first-child:before {
+ counter-increment: r3 0;
+}
+#l397 {
+ padding-left: 0pt;
+ counter-reset: r3 1;
+}
+#l397 > li > *:first-child:before {
+ counter-increment: r3;
+ content: counter(r1, decimal) "." counter(r2, decimal) "."
+   counter(r3, decimal) " ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l397 > li:first-child > *:first-child:before {
+ counter-increment: r3 0;
+}
+li {
+ display: block;
+}
+#l398 {
+ padding-left: 0pt;
+ counter-reset: s1 2;
+}
+#l398 > li > *:first-child:before {
+ counter-increment: s1;
+ content: counter(s1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l398 > li:first-child > *:first-child:before {
+ counter-increment: s1 0;
+}
+#l399 {
+ padding-left: 0pt;
+ counter-reset: s2 2;
+}
+#l399 > li > *:first-child:before {
+ counter-increment: s2;
+ content: counter(s2, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l399 > li:first-child > *:first-child:before {
+ counter-increment: s2 0;
+}
+li {
+ display: block;
+}
+#l400 {
+ padding-left: 0pt;
+ counter-reset: t1 2;
+}
+#l400 > li > *:first-child:before {
+ counter-increment: t1;
+ content: counter(t1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l400 > li:first-child > *:first-child:before {
+ counter-increment: t1 0;
+}
+li {
+ display: block;
+}
+#l401 {
+ padding-left: 0pt;
+ counter-reset: u1 2;
+}
+#l401 > li > *:first-child:before {
+ counter-increment: u1;
+ content: counter(u1, decimal) ". ";
+ color: black;
+ font-family: Arial, sans-serif;
+ font-style: normal;
+ font-weight: bold;
+ text-decoration: none;
+ font-size: 11pt;
+}
+#l401 > li:first-child > *:first-child:before {
+ counter-increment: u1 0;
+}
+table,
+tbody {
+ vertical-align: top;
+ overflow: visible;
+} */

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<head>
+  <link rel="stylesheet" type="text/css" href="../static/css/code.css" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <span id="title">Archivy</span>
+          <a href="/">
+            <!--                    <img src="./logo.png" alt="our logo"> -->
+          </a>
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a class="signup-button-text" href="{{url_for('register')}}"
+                >Sign up</a
+              >
+            </div>
+            <div class="undefined secondaryButton">
+              <a class="profile-button-text" href="{{url_for('profile')}}"
+                >Profile</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="codeExplorer">
+          <div class="innercodeExplorer">
+            <div class="sidebar">
+              <iframe
+                class="sideBariFrame"
+                src="{{ url_for('iframe', filename='bookmarks.html') }}"
+              ></iframe>
+            </div>
+            <div class="codeContainer">
+              <div class="collapseContainer">
+                <button class="toggle-btn"><</button>
+              </div>
+              <iframe
+                class="codeContentiFrame"
+                src="{{ url_for('iframe', filename='content.html') }}"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="chatBot">
+          <div class="chat-messages" id="messages">
+            <div class="chatMessageContainer">
+              <div class="chatMessage aiResponse">
+                <div class="messageContainer">
+                  <div class="messageContent">
+                    <pre class="plainText">
+Hi, I'm here to assist you with your construction project. You can ask me anything regarding building codes.</pre
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="float: left; clear: both"></div>
+          </div>
+          <div id="inputField">
+            <div id="inputFieldArea">
+              <input
+                id="inputFieldValue"
+                placeholder="Ask a question"
+                value=""
+                data-np-checked="1"
+              />
+              <div
+                onclick="sendMessage()"
+                id="sendInputButton"
+                class="undefined primaryButton"
+              >
+                Ask
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const url = "static/2015-Building-Code.pdf";
+
+  async function renderPage(doc, pageNumber) {
+    if (pageNumber >= 1 && pageNumber <= doc._pdfInfo.numPages) {
+      // Fetch the page
+      const page = await doc.getPage(pageNumber);
+
+      // Set the viewport
+      const viewport = page.getViewport({ scale: 1.5 });
+
+      // Set the canvas dimensions to the PDF page dimensions
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      // Render the PDF page into the canvas context
+      await page.render({
+        canvasContext: context,
+        viewport: viewport,
+      }).promise;
+
+      // Create and position the text layer div
+      const textLayerDiv = document.getElementById("text-layer");
+      textLayerDiv.style.width = `${viewport.width}px`;
+      textLayerDiv.style.height = `${viewport.height}px`;
+
+      // Render the text layer
+      const textContent = await page.getTextContent();
+      const textLayer = new TextLayerBuilder({
+        textLayerDiv,
+        pageIndex: pageNumber - 1,
+        viewport,
+      });
+      textLayer.setTextContent(textContent);
+      textLayer.render();
+    } else {
+      console.log("Please specify a valid page number");
+    }
+  }
+
+  async function sendMessage() {
+    const chatInputField = document.getElementById("inputFieldValue");
+    const chatMessages = document.querySelector(".chat-messages");
+    const message = chatInputField.value;
+
+    const selectedTextElement = document.querySelector(".selected-text");
+    const selectedText = selectedTextElement
+      ? selectedTextElement.textContent
+      : "";
+
+    if (message.trim() !== "" || selectedText.trim() !== "") {
+      const messageContainer = document.createElement("div");
+      messageContainer.classList.add("chatMessageContainer");
+
+      const messageElement = document.createElement("div");
+      messageElement.classList.add("chatMessage", "user-message");
+
+      messageElement.textContent =
+        message +
+        (selectedText ? " [Selected text: " + selectedText + "]" : "");
+
+      chatMessages.appendChild(messageContainer);
+
+      const messageContainers = document.querySelectorAll(
+        ".chatMessageContainer"
+      );
+      const lastMessageContainer =
+        messageContainers[messageContainers.length - 1];
+      lastMessageContainer.appendChild(messageElement);
+
+      chatInputField.value = "";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    if (message.trim() !== "" || selectedText.trim() !== "") {
+      // Send message and selected text to server
+      const response = await fetch("/process_message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message, selectedText }),
+      });
+
+      // Check if the request was successful
+      if (response.ok) {
+        const responseData = await response.json();
+        const data = responseData.responseText;
+        console.log(data);
+
+        const messageContainer = document.createElement("div");
+        messageContainer.classList.add("chatMessageContainer");
+
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("chatMessage", "airesponse");
+
+        messageElement.textContent = data;
+
+        chatMessages.appendChild(messageContainer);
+
+        const messageContainers = document.querySelectorAll(
+          ".chatMessageContainer"
+        );
+        const lastMessageContainer =
+          messageContainers[messageContainers.length - 1];
+        lastMessageContainer.appendChild(messageElement);
+      } else {
+        console.error("Error sending message to the server");
+      }
+    }
+  }
+
+  // document.querySelector("embed").addEventListener("mouseup", function () {
+  //   const selectedText = window.getSelection();
+  //   console.log("oii mayte");
+  //   console.log(selectedText);
+
+  //   // Clear previous selections
+  //   const previousSelections = document.querySelectorAll(".selected-text");
+  //   previousSelections.forEach((selection) => {
+  //     const parent = selection.parentNode;
+  //     while (selection.firstChild) {
+  //       parent.insertBefore(selection.firstChild, selection);
+  //     }
+  //     parent.removeChild(selection);
+  //   });
+
+  //   if (selectedText.toString().trim() !== "") {
+  //     const range = selectedText.getRangeAt(0);
+  //     const span = document.createElement("span");
+  //     span.className = "selected-text";
+  //     range.surroundContents(span);
+  //   }
+  // });
+
+  // Update codeContent iFrame to sidebar selected item
+  var baseUrl = "{{ url_for('iframe', filename='') }}";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sideBariFrame = document.querySelector(".sideBariFrame");
+    if (sideBariFrame) {
+      console.log("hey1");
+      sideBariFrame.addEventListener("load", function () {
+        const linksToUpdateIframe =
+          sideBariFrame.contentDocument.querySelectorAll(".bookmark");
+        linksToUpdateIframe.forEach(function (linkToUpdateIframe) {
+          console.log("hey2");
+          linkToUpdateIframe.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const codeContentiFrame =
+              document.querySelector(".codeContentiFrame");
+            if (codeContentiFrame) {
+              console.log("hey3");
+              // Use the entire href attribute value
+              const href = linkToUpdateIframe.getAttribute("href");
+              codeContentiFrame.src = baseUrl + href;
+            }
+          });
+        });
+      });
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var isHidden = false;
+    var btn = document.querySelector(".toggle-btn");
+    var div = document.querySelector(".sidebar");
+    btn.addEventListener("click", function () {
+      if (isHidden) {
+        div.classList.remove("hidden");
+        btn.textContent = "<";
+      } else {
+        div.classList.add("hidden");
+        btn.textContent = ">";
+      }
+      isHidden = !isHidden;
+    });
+  });
+</script>

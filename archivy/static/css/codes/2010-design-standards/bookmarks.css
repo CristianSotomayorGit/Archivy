@@ -1,0 +1,72 @@
+* {
+  color: white !important;
+  text-decoration: none !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+*:hover {
+  color: green !important;
+}
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Dark semi-transparent background */
+  border-radius: 10px; /* Rounded ends of the scrollbar */
+}
+
+/* Scrollbar thumb (the part that you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #606060; /* Dark gray color */
+  border-radius: 10px; /* Rounded ends of the scrollbar */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Change color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #505050; /* Even darker gray for hover effect */
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  margin: 1pt;
+  text-align: left;
+  position: fixed;
+  white-space: nowrap;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.data {
+  margin: 1pt;
+  text-align: left;
+  padding-top: 3pt;
+  margin-left: 12pt;
+}
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #0f0f0f;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 1pt;
+}
+span {
+  margin: 1pt;
+}
+a {
+  display: block;
+}
