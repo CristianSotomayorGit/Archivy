@@ -13,7 +13,6 @@ with app.app_context():
     print(config_instance.SECRET_KEY)
     print(config_instance.OPEN_AI_SECRET_KEY)
 
-
     db = SQLAlchemy(app)
     bcrypt = Bcrypt(app)    
 

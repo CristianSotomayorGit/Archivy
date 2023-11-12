@@ -160,6 +160,21 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
         messageContainers[messageContainers.length - 1];
       lastMessageContainer.appendChild(messageElement);
 
+      const loadingElement = document.createElement("div");
+      loadingElement.setAttribute("id", "loadingMessage");
+      loadingElement.setAttribute("style", "display: none;");
+      loadingElement.setAttribute("class", "simpleText");
+      loadingElement.textContent = "Thinking";
+
+      const innerLoadingelement = document.createElement("span");
+      innerLoadingelement.setAttribute("id", "dots");
+
+      loadingElement.appendChild(innerLoadingelement);
+
+      lastMessageContainer.appendChild(loadingElement);
+
+      var loadingInterval = startLoadingAnimation();
+
       chatInputField.value = "";
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -178,27 +193,107 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
       if (response.ok) {
         const responseData = await response.json();
         const data = responseData.responseText;
+        const relatedChunks = responseData.relatedChunks;
+
+        console.log(
+          "yooooooooooooooooooooooooooooooooooooooooooooooooo!!!!!!!!!!!!!!!"
+        );
         console.log(data);
 
+        relatedSections = [];
+
+        for (var i = 0; i < relatedChunks.length; i++) {
+          var chunk = relatedChunks[i];
+          var divClass = chunk.class;
+          var divId = chunk.id;
+
+          sectionDiv = document.createElement("a");
+          sectionDiv.setAttribute("href", "content.html#" + divId);
+          sectionDiv.setAttribute("class", "relatedSection");
+
+          if (divClass) {
+            sectionDiv.textContent = divClass;
+          } else {
+            sectionDiv.textContent = "Related Section";
+          }
+
+          relatedSections.push(sectionDiv); // Use push to add the element to the array
+        }
+
+        // Crete AI response text bubble
         const messageContainer = document.createElement("div");
         messageContainer.classList.add("chatMessageContainer");
 
         const messageElement = document.createElement("div");
         messageElement.classList.add("chatMessage", "airesponse");
 
-        messageElement.textContent = data;
+        // Replace line and paragraph breaks with <br> tags
 
-        chatMessages.appendChild(messageContainer);
+        messageElement.innerHTML = data.replace(/(?:\r\n|\r|\n)/g, "<br>");
 
-        const messageContainers = document.querySelectorAll(
-          ".chatMessageContainer"
-        );
-        const lastMessageContainer =
-          messageContainers[messageContainers.length - 1];
+        let messageContainers;
+        messageContainers = document.querySelectorAll(".chatMessageContainer");
+
+        let lastMessageContainer;
+
+        stopLoadingAnimation(loadingInterval);
+        lastMessageContainer = messageContainers[messageContainers.length - 1];
         lastMessageContainer.appendChild(messageElement);
+
+        // Create AI response section bubbles
+        const sectionsContainer = document.createElement("div");
+        sectionsContainer.classList.add("chatMessageContainer");
+
+        const sectionsElement = document.createElement("div");
+        sectionsElement.classList.add("airesponse", "sections");
+        sectionsElement.textContent = "Sources:";
+        for (var i = 0; i < relatedSections.length; i++) {
+          section = relatedSections[i];
+          sectionsElement.appendChild(section);
+          console.log(section);
+        }
+
+        chatMessages.appendChild(sectionsContainer);
+
+        messageContainers = document.querySelectorAll(".chatMessageContainer");
+
+        lastMessageContainer = messageContainers[messageContainers.length - 1];
+        lastMessageContainer.appendChild(sectionsElement);
+
+        var baseUrl = "{{ url_for('iframe', filename='') }}";
+
+        if (sectionsElement) {
+          const linksToUpdateIframe = sectionsElement.querySelectorAll("a");
+          console.log("here!!!!!!!!!!!!!!!!!!!!!!!!");
+
+          console.log(linksToUpdateIframe);
+          for (var i = 0; i < linksToUpdateIframe.length; i++) {
+            section = linksToUpdateIframe[i];
+            console.log(i);
+            console.log(section.getAttribute("href")); // Use getAttribute to access href
+          }
+          console.log("here!!!!!!!!!!!!!!!!!!!!!!!!");
+
+          linksToUpdateIframe.forEach(function (linkToUpdateIframe) {
+            linkToUpdateIframe.addEventListener("click", function (event) {
+              event.preventDefault(); // Prevent the default link behavior
+
+              const codeContentiFrame =
+                document.querySelector(".codeContentiFrame");
+
+              if (codeContentiFrame) {
+                // Use the entire href attribute value
+                const href = linkToUpdateIframe.getAttribute("href");
+                codeContentiFrame.src = baseUrl + href;
+              }
+            });
+          });
+        }
       } else {
         console.error("Error sending message to the server");
       }
+      var div = document.querySelector(".chat-messages");
+      div.scrollTop = div.scrollHeight;
     }
   }
 
@@ -231,18 +326,15 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
   document.addEventListener("DOMContentLoaded", function () {
     const sideBariFrame = document.querySelector(".sideBariFrame");
     if (sideBariFrame) {
-      console.log("hey1");
       sideBariFrame.addEventListener("load", function () {
         const linksToUpdateIframe =
           sideBariFrame.contentDocument.querySelectorAll(".bookmark");
         linksToUpdateIframe.forEach(function (linkToUpdateIframe) {
-          console.log("hey2");
           linkToUpdateIframe.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent the default link behavior
             const codeContentiFrame =
               document.querySelector(".codeContentiFrame");
             if (codeContentiFrame) {
-              console.log("hey3");
               // Use the entire href attribute value
               const href = linkToUpdateIframe.getAttribute("href");
               codeContentiFrame.src = baseUrl + href;
@@ -268,4 +360,41 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
       isHidden = !isHidden;
     });
   });
+
+  document
+    .getElementById("inputFieldValue")
+    .addEventListener("keypress", function (event) {
+      if (event.keyCode === 13) {
+        // 13 is the key code for Enter
+        event.preventDefault(); // Prevent the default action to stop submitting the form directly
+        sendMessage();
+      }
+    });
+
+  function startLoadingAnimation() {
+    var loadingMessage = document.getElementById("loadingMessage");
+    var dots = document.getElementById("dots");
+    var numDots = 0;
+    loadingMessage.style.display = "inline";
+
+    var interval = setInterval(function () {
+      dots.textContent += ".";
+      numDots++;
+
+      if (numDots === 4) {
+        dots.textContent = "";
+        numDots = 0;
+      }
+    }, 500); // Adjust the interval time as needed
+
+    return interval;
+  }
+
+  function stopLoadingAnimation(interval) {
+    clearInterval(interval);
+    var loadingMessage = document.getElementById("loadingMessage");
+    if (loadingMessage) {
+      loadingMessage.remove(); // Remove the element from the DOM
+    }
+  }
 </script>

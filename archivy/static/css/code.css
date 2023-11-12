@@ -1,4 +1,26 @@
+.simpleText {
+  font-style: italic;
+}
+
 /* Collapse Button */
+.airesponse.sections {
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #099f2b6e;
+  border-left: 3px solid #099f2b;
+
+  font-style: italic;
+  padding: 15px;
+}
+
+.relatedSection {
+  padding: 12px;
+  color: #fff;
+  overflow-wrap: break-word;
+}
 .codeContainer {
   position: relative;
 }
