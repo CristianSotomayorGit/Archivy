@@ -65,9 +65,11 @@ class LoginForm(FlaskForm):
 
     submit = SubmitField('Login')
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+
+# TODO: must build a landing page
+@app.route('/')
+def index():
+    return render_template('code.html')
 
 # @app.route('/iframe_sidebar_content')
 # def iframe_sidebar_content():
@@ -231,7 +233,7 @@ def login():
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
-                return redirect(url_for('profile'))
+                return redirect(url_for('viewcode'))
     return render_template('login.html', form=form)
 
 
