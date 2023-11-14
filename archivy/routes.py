@@ -1,10 +1,7 @@
 from wtforms import PasswordField, StringField, SubmitField, ValidationError
 from archivy import app, db, bcrypt
-from flask import Blueprint, jsonify, render_template, url_for, flash, redirect, request
-# from extensions import db
-# from modules.user.forms import RegistrationForm, LoginForm
-# from modules.user.models import User
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
+from flask import jsonify, render_template, url_for, flash, redirect, request
+from flask_login import  login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms.validators import InputRequired, Length, ValidationError
 from archivy.model import User, Project, Conversation
@@ -12,14 +9,11 @@ from sqlalchemy.exc import SQLAlchemyError
 from langchain.chat_models import ChatOpenAI
 from langchain.chains.question_answering import load_qa_chain
 import os
-# from utility.pdfLoader3 import create_docsearch
-from utility.pdfLoader import create_docsearch, search_pdf
-# from utility.pdfLoader2 import create_searchable_index, search_pdf
+from utility.pdfLoader import create_docsearch
+# , search_pdf
 
 ##Load pdf
-# current_directory = os.path.dirname(os.path.abspath(__file__))
-# pdf_path = os.path.join(current_directory, "static", "2010-design-standards.pdf") 
-pdf_path = os.path.join("static", "2010-design-standards.pdf") 
+pdf_path = os.path.join("static", "newContentWithClasses.html") 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -244,10 +238,6 @@ def login():
 print(app.config['OPEN_AI_SECRET_KEY'])
 
 
-# searchable_index = create_searchable_index(
-# pdf_path,
-# pinecone_api_key='d8e80bbb-525e-475f-ac1c-4eae25c860bd') 
-
 docsearch_obj= create_docsearch(
 pdf_path,
 openai_api_key = app.config['OPEN_AI_SECRET_KEY'],
@@ -268,6 +258,13 @@ def process_message():
     # selectedText = data.get('selectedText')
     # openai.api_key = apiKey
 
+    conversation_history = [ {
+        "role": "system",
+        "content": "You are a building codes expert with expertise in ADA Design Standards. Be friendly and helpful. Your replies should be in paragraphs with double spaces in between them, use numbered lists when necessary, and include a sources section at the bottom listing specific building code sections relevant to your response."
+    },
+    {"role": "user", "content": message}
+]
+
     llm = ChatOpenAI(temperature=0, openai_api_key=app.config['OPEN_AI_SECRET_KEY'],model="gpt-4")
     chain = load_qa_chain(llm, chain_type='stuff')
 
@@ -277,8 +274,19 @@ def process_message():
 
 
     docs =docsearch_obj.similarity_search(message)
-    print(docs)
-    responseText = chain.run(input_documents=docs, question=message)
+
+    relatedChunks = []
+    for doc in docs:
+        print(doc.metadata)
+        relatedChunks.append(doc.metadata)
+
+
+        system_message = {
+        "role": "system",
+        "content": "You are a building codes expert with expertise in ADA Design Standards. Your replies should be in paragraphs with spaces in between them, use numbered lists when necessary, and include a sources section at the bottom listing specific building code sections relevant to your response."
+    }    
+
+    responseText = chain.run(input_documents=docs, question=conversation_history)
     # Process the message and selectedText, and generate a response
     # response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
     #                                     messages=[
@@ -289,11 +297,11 @@ def process_message():
     
     # responseText = response["choices"][0]["message"]["content"]
     
-    location = search_pdf(message, index_name='langchain1')
+    # location = search_pdf(message, index_name='langchain1')
 
     print(responseText)
     print("")
-    print("Location in PDF:", location)
+    # print("Location in PDF:", location)
     print("")
 
-    return jsonify(responseText=responseText)
+    return jsonify(responseText=responseText, relatedChunks=relatedChunks)
