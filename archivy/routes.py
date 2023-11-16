@@ -225,6 +225,14 @@ def register():
 
     return render_template('register.html',form=form)
 
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
+
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
