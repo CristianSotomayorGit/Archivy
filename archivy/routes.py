@@ -1,10 +1,10 @@
-from wtforms import PasswordField, StringField, SubmitField, ValidationError
+from wtforms import SelectField, PasswordField, StringField, SubmitField, ValidationError
 from archivy import app, db, bcrypt
 from flask import jsonify, render_template, url_for, flash, redirect, request
 from flask_login import  login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms.validators import InputRequired, Length, ValidationError
-from archivy.model import User, Project, Conversation
+from archivy.model import User, Project, Conversation, UserInfo
 from sqlalchemy.exc import SQLAlchemyError
 from langchain.chat_models import ChatOpenAI
 from langchain.chains.question_answering import load_qa_chain
@@ -65,6 +65,112 @@ class LoginForm(FlaskForm):
 
     submit = SubmitField('Login')
 
+class MarketSurveyform(FlaskForm):
+
+    industry_choices = [
+        ('', 'Industry'),
+        ('Academic', 'Academic'),
+        ('Architecture', 'Architecture'),
+        ('BuildingOwnerManager', 'Building Owner / Manager'),
+        ('Construction', 'Construction'),
+        ('Engineering', 'Engineering'),
+        ('Government', 'Government'),
+        ('Manufacturing', 'Manufacturing'),
+        ('SpecialtyContractor', 'Specialty Contractor'),
+        ('HomeOwner', 'Home Owner'),
+        ('Other', 'Other')
+    ]
+
+    jurisdiction_choices = [
+                ('', 'Jurisdiction'),
+
+    ('Alabama', 'Alabama'),
+    ('Alaska', 'Alaska'),
+    ('Arizona', 'Arizona'),
+    ('Arkansas', 'Arkansas'),
+    ('California', 'California'),
+    ('Colorado', 'Colorado'),
+    ('Connecticut', 'Connecticut'),
+    ('Delaware', 'Delaware'),
+    ('Florida', 'Florida'),
+    ('Georgia', 'Georgia'),
+    ('Hawaii', 'Hawaii'),
+    ('Idaho', 'Idaho'),
+    ('Illinois', 'Illinois'),
+    ('Indiana', 'Indiana'),
+    ('Iowa', 'Iowa'),
+    ('Kansas', 'Kansas'),
+    ('Kentucky', 'Kentucky'),
+    ('Louisiana', 'Louisiana'),
+    ('Maine', 'Maine'),
+    ('Maryland', 'Maryland'),
+    ('Massachusetts', 'Massachusetts'),
+    ('Michigan', 'Michigan'),
+    ('Minnesota', 'Minnesota'),
+    ('Mississippi', 'Mississippi'),
+    ('Missouri', 'Missouri'),
+    ('Montana', 'Montana'),
+    ('Nebraska', 'Nebraska'),
+    ('Nevada', 'Nevada'),
+    ('New Hampshire', 'New Hampshire'),
+    ('New Jersey', 'New Jersey'),
+    ('New Mexico', 'New Mexico'),
+    ('New York', 'New York'),
+    ('North Carolina', 'North Carolina'),
+    ('North Dakota', 'North Dakota'),
+    ('Ohio', 'Ohio'),
+    ('Oklahoma', 'Oklahoma'),
+    ('Oregon', 'Oregon'),
+    ('Pennsylvania', 'Pennsylvania'),
+    ('Rhode Island', 'Rhode Island'),
+    ('South Carolina', 'South Carolina'),
+    ('South Dakota', 'South Dakota'),
+    ('Tennessee', 'Tennessee'),
+    ('Texas', 'Texas'),
+    ('Utah', 'Utah'),
+    ('Vermont', 'Vermont'),
+    ('Virginia', 'Virginia'),
+    ('Washington', 'Washington'),
+    ('West Virginia', 'West Virginia'),
+    ('Wisconsin', 'Wisconsin'),
+    ('Wyoming', 'Wyoming')
+]
+    
+    project_type_choices = [
+    ('', 'Main Project Type'),
+    ('Commercial', 'Commercial'),
+    ('Education', 'Education'),
+    ('Public', 'Public'),
+    ('Residential', 'Residential'),
+    ('Mixed', 'Mixed'),
+    ('Other', 'Other')
+    ]
+
+    organization_size_choices = [('','Organization Size'),
+                                 ('1-10','1-10'),
+                                 ('11-50','11-50'),
+                                 ('51-200','51-200'),
+                                 ('201-1000','201-1000'),
+                                 ('> 1000','> 1000')]
+
+
+    industry= SelectField('Industry', choices=industry_choices, default='', validators=[InputRequired()])
+    
+    jurisdiction= SelectField('Jurisdiction', choices=jurisdiction_choices, default='', validators=[InputRequired()])
+
+    project_type= SelectField('Project_req', choices=project_type_choices, default='', validators=[InputRequired()])
+
+    organization_size= SelectField('Project_req', choices=organization_size_choices, default='', validators=[InputRequired()])
+
+    desired_code_1 = StringField(validators=[
+                           InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Desired Building Code #1"})
+
+    desired_code_2 = StringField(validators=[
+                           InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Desired Building Code #2"})
+
+    submit = SubmitField('Submit')
+
+
 
 # TODO: must build a landing page
 @app.route('/')
@@ -90,6 +196,26 @@ def iframe():
     return render_template('codes/2010-design-standards/' + str(filename))
 
 
+@app.route('/marketSurvey', methods=["GET", "POST"])
+def marketSurvey():
+    form = MarketSurveyform()
+
+    try:
+        if form.validate_on_submit():
+            new_user_info = UserInfo(industry=form.industry.data,jurisdiction=form.jurisdiction.data, main_project_type=form.project_type.data, organization_size=form.organization_size.data, building_code_1=form.desired_code_1.data, building_code_2=form.desired_code_2.data, user_id=current_user.id)
+            db.session.add(new_user_info)
+
+            user_to_update = User.query.filter_by(id=current_user.id).first()
+            user_to_update.hasAnswered = 1
+            
+            db.session.commit()
+            return redirect(url_for('viewcode'))
+
+    except SQLAlchemyError as e:
+        db.session.rollback() 
+        print(e)
+
+    return render_template('marketsurvey.html', form=form)
 
 @app.route('/viewcode')
 def viewcode():
@@ -241,7 +367,13 @@ def login():
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
-                return redirect(url_for('viewcode'))
+
+                # Prompt user for market research info
+                if user.hasAnswered == False:
+                    return redirect(url_for('marketSurvey'))
+                
+                else:
+                    return redirect(url_for('viewcode'))
     return render_template('login.html', form=form)
 
 
