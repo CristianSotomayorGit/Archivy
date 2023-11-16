@@ -7,13 +7,51 @@
 
 <html>
   <body>
+    <!-- User warning prompt -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content"">
+        <div class="modal-title-container">
+          <h1 class="modal-title">Archivy</h1>
+        </div>
+        <div
+          style="
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 10px;
+          "
+        >
+          <div class="warning-section">
+            <h3>Prompt It 💬</h3>
+            <p>
+              Pose your questions about building codes, construction permits,
+              and compliance requirements.
+            </p>
+          </div>
+          <div class="warning-section">
+            <h3>Protect Info ⛔</h3>
+            <p>
+              Keep your personal data and confidential project details secure
+              when seeking advice.
+            </p>
+          </div>
+          <div class="warning-section">
+            <h3>Verify Results 🔎</h3>
+            <p>
+              Verify the building regulations and code interpretations provided
+              with local authorities to ensure accuracy.
+            </p>
+          </div>
+        </div>
+        <div><button id="myBtn">Okay</button></div>
+      </div>
+    </div>
+
     <div class="app">
       <div class="header">
         <div class="logo">
-          <span id="title">Archivy</span>
-          <a href="/">
-            <!--                    <img src="./logo.png" alt="our logo"> -->
-          </a>
+          <a  href="{{url_for('index')}}" id="title" style="text-decoration: none;">Archivy</a>
         </div>
         <div class="buttons">
           <div class="ctaButtons">
@@ -53,12 +91,13 @@
         <div id="chatBot">
           <div class="chat-messages" id="messages">
             <div class="chatMessageContainer">
-              <div class="chatMessage aiResponse">
+              <div class="systemPrompt">
                 <div class="messageContainer">
                   <div class="messageContent">
-                    <pre class="plainText">
+                    <pre style="font-weight: bold;"class="plainText">
 Hi, I'm here to assist you with your construction project. You can ask me anything regarding building codes.</pre
                     >
+                    <p style="font-style: italic; margin-bottom: 0px;">  Archivy can make mistakes. Consider checking important information.</p>
                   </div>
                 </div>
               </div>
@@ -85,6 +124,31 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
         </div>
       </div>
     </div>
+    <!-- User warning prompt -->
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // When the user clicks on the button, open the modal
+      window.onload = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      btn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
 
