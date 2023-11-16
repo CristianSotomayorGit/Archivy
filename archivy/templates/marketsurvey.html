@@ -1,0 +1,52 @@
+<!DOCTYPE html><meta charset="utf-8" />
+<head>
+  <title>Markey Survey</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="../static/css/marketsurvey.css"
+  />
+</head>
+<html>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <a
+            href="{{url_for('index')}}"
+            id="title"
+            style="text-decoration: none"
+            >Archivy</a
+          >
+        </div>
+        <div class="buttons">
+          <div class="ctaButtons">
+            <div id="signUpButton" class="undefined primaryButton">
+              <a class="register-button-text" href="{{url_for('code')}}"
+                >Learn more</a
+              >
+            </div>
+            <div class="undefined secondaryButton">
+              <a class="login-button-text" href="{{url_for('login')}}"
+                >Log in</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div id="signUp-Box">
+          <h1>Answer Some Questions</h1>
+          <form id="signup-form" method="POST" action="">
+            {{ form.hidden_tag() }} {{ form.industry }} {{form.jurisdiction}}
+            {{form.project_type}} {{form.organization_size}}
+            {{form.desired_code_1}} {{form.desired_code_2}}
+
+            <div style="margin-top: 16px; margin-bottom: 16px"></div>
+            {{ form.submit }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
