@@ -10,20 +10,39 @@
     width: 100% !important;
     max-width: 100% !important;
   }
+
+  .modal-content {
+    width: auto !important;
+    /* padding: 0px !important; */
+  }
+
+  .modal-box-container {
+    display: contents !important;
+    width: calc(100% - 40px) !important;
+  }
+
+  #myBtn {
+    height: 50px;
+    width: 100%;
+  }
 }
 
 /* Targeting devices with a resolution of approximately 1179 x 2556 pixels */
-@media only screen and (min-device-width: 1179px) and (max-device-width: 1179px) and (min-device-height: 2556px) and (max-device-height: 2556px) {
+/* @media only screen and (min-device-width: 1179px) and (max-device-width: 1179px) and (min-device-height: 2556px) and (max-device-height: 2556px) {
   html {
-    zoom: 1.5; /* Zoom in by 150% */
+    zoom: 1.5; 
   }
 
-  /* Alternative using transform for better compatibility */
   html {
     transform: scale(1.5);
     transform-origin: top left;
   }
-}
+
+  .modal-content {
+    width: auto;
+    margin: 20px;
+  }
+} */
 
 /* User warning prompt */
 .modal {
