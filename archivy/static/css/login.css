@@ -1,3 +1,23 @@
+@media screen and (max-width: 600px) {
+  #codeExplorer {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #signUp-Box {
+    width: 350px !important;
+  }
+  input {
+    width: 330px !important;
+  }
+
+  input#submit {
+    width: 350px !important;
+  }
+  #terms {
+    width: 20px !important;
+  }
+}
+
 .app {
   position: absolute;
   width: 100%;
