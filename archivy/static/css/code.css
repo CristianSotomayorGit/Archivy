@@ -1,16 +1,3 @@
-/* Mobile Settings */
-
-@media screen and (max-width: 600px) {
-  #codeExplorer {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  #chatBot {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
 /* User warning prompt */
 .modal {
   display: none; /* Hidden by default */
