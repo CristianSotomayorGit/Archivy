@@ -1,3 +1,4 @@
+from sqlalchemy import Text
 from archivy import db 
 from flask_login import UserMixin
 
@@ -16,14 +17,15 @@ class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(500))
-    userid = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     address = db.Column(db.String(500), nullable=False)
     conversations = db.relationship('Conversation', backref='project', lazy=True)
 
 class Conversation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    projectid = db.Column(db.Integer, db.ForeignKey('project.id'))
+    name = db.Column(db.String(100), nullable=True)
+    json = db.Column(Text(length=16777215), nullable=True)
+    project_id = db.Column(db.Integer, db.ForeignKey('project.id'))
 
 class UserInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)

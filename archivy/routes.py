@@ -1,6 +1,6 @@
 from wtforms import SelectField, PasswordField, StringField, SubmitField, ValidationError
 from archivy import app, db, bcrypt
-from flask import jsonify, render_template, url_for, flash, redirect, request
+from flask import jsonify, render_template, session, url_for, flash, redirect, request
 from flask_login import  login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms.validators import InputRequired, Length, ValidationError
@@ -10,6 +10,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains.question_answering import load_qa_chain
 import os
 from utility.pdfLoader import create_docsearch
+import json
 # , search_pdf
 
 ##Load pdf
@@ -175,7 +176,7 @@ class MarketSurveyform(FlaskForm):
 # TODO: must build a landing page
 @app.route('/')
 def index():
-    return render_template('code.html')
+    return redirect(request.referrer or url_for('viewcode'))
 
 # @app.route('/iframe_sidebar_content')
 # def iframe_sidebar_content():
@@ -219,12 +220,39 @@ def marketSurvey():
 
 @app.route('/viewcode')
 def viewcode():
+
+    current_project_id = 3
+
+    new_conversation = Conversation(project_id=current_project_id)
+    db.session.add(new_conversation)
+    db.session.commit()
+
+    json_data = session.pop('json_data', None)
+
+    if json_data:
+        print('fhsf;lsafd;lhds;flhsad;fhsadlkfjh')
+        print(json_data)
+        conversation = json.loads(json_data)
+        print(conversation)
+        for message in conversation:
+            print(message)
+        return render_template('code.html', conversation=conversation)
+    
+    print('fhsf;lsafd;lhds;flhsad;fhsadlkfjh')
     return render_template('code.html')
 
 
 @app.route('/conversation/<int:conversation_id>')
 def conversation(conversation_id):
-    return str(conversation_id)
+
+    conversation = Conversation.query.filter_by(id=conversation_id).first()
+
+    if conversation:
+        conversation_json = conversation.json
+
+        session['json_data'] = conversation_json
+
+        return redirect(url_for('viewcode'))
 
 
 @app.route('/project/<int:project_id>')
@@ -247,7 +275,7 @@ def deleteproject(project_id):
         project = Project.query.get(project_id)
         
         # Ensure the current user owns the project before deleting
-        if project and project.userid == current_user.id:
+        if project and project.user_id == current_user.id:
             db.session.delete(project)
             db.session.commit()
             flash('Project successfully deleted', 'success')
@@ -292,7 +320,7 @@ def newproject():
     try:
         print('yoooooooooooooooo')
         if form.validate_on_submit():
-            new_project = Project(userid=current_user.id, name=form.name.data,address=form.address.data, description=form.description.data)
+            new_project = Project(user_id=current_user.id, name=form.name.data,address=form.address.data, description=form.description.data)
             db.session.add(new_project)
             db.session.commit()
             return redirect(url_for('profile'))
@@ -393,26 +421,22 @@ index_name='langchain1'
 def code():
     return render_template('code.html')
 
+
+conversation_history = [ {
+    "role": "system",
+    "content": "You are a building codes expert with expertise in ADA Design Standards. Be friendly and helpful. Your replies should be in paragraphs with double spaces in between them, use numbered lists when necessary, and include a sources section at the bottom listing specific building code sections relevant to your response."
+}]
+
 @app.route('/process_message', methods=['POST'])
 def process_message():
     data = request.get_json()
     message = data.get('message')
-    # selectedText = data.get('selectedText')
-    # openai.api_key = apiKey
 
-    conversation_history = [ {
-        "role": "system",
-        "content": "You are a building codes expert with expertise in ADA Design Standards. Be friendly and helpful. Your replies should be in paragraphs with double spaces in between them, use numbered lists when necessary, and include a sources section at the bottom listing specific building code sections relevant to your response."
-    },
-    {"role": "user", "content": message}
-]
+    conversation_history.append({"role": "user", "content": message})
+
 
     llm = ChatOpenAI(temperature=0, openai_api_key=app.config['OPEN_AI_SECRET_KEY'],model="gpt-4")
     chain = load_qa_chain(llm, chain_type='stuff')
-
-    # Get the current directory (directory of app.py)
-
-    # Example usage:
 
 
     docs =docsearch_obj.similarity_search(message)
@@ -422,28 +446,28 @@ def process_message():
         print(doc.metadata)
         relatedChunks.append(doc.metadata)
 
-
-        system_message = {
-        "role": "system",
-        "content": "You are a building codes expert with expertise in ADA Design Standards. Your replies should be in paragraphs with spaces in between them, use numbered lists when necessary, and include a sources section at the bottom listing specific building code sections relevant to your response."
-    }    
-
     responseText = chain.run(input_documents=docs, question=conversation_history)
-    # Process the message and selectedText, and generate a response
-    # response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
-    #                                     messages=[
-    #                                         {"role": "system", "content": "You are a helpful assistant that helps construction professionals interpret building codes."},
-    #                                         {"role": "user", "content": f"Message: {message} | Selected Text: {selectedText}"}
-    #                                     ]
-    #                                 )
-    
-    # responseText = response["choices"][0]["message"]["content"]
-    
-    # location = search_pdf(message, index_name='langchain1')
+
+
+
+    response = {"response": responseText, "sources": relatedChunks}
+
+    conversation_history.append({"role": "assistant", "content": response})
+
+    data = json.dumps(conversation_history)
 
     print(responseText)
     print("")
-    # print("Location in PDF:", location)
+    print(relatedChunks)
     print("")
+    print(data)
+    print("")
+
+
+    latest_conversation = Conversation.query.order_by(Conversation.id.desc()).first()
+
+    if latest_conversation:
+        latest_conversation.json = data
+        db.session.commit()
 
     return jsonify(responseText=responseText, relatedChunks=relatedChunks)
