@@ -4,7 +4,7 @@ from flask import jsonify, render_template, session, url_for, flash, redirect, r
 from flask_login import  login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms.validators import InputRequired, Length, ValidationError
-from archivy.model import User, Project, Conversation, UserInfo
+from .models import User, Project, Conversation, UserInfo
 from sqlalchemy.exc import SQLAlchemyError
 from langchain.chat_models import ChatOpenAI
 from langchain.chains.question_answering import load_qa_chain
