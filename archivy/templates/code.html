@@ -44,7 +44,9 @@
             </p>
           </div>
         </div>
-        <div><button id="myBtn">Okay</button></div>
+        <div>
+          <button id="myBtn">Okay</button>
+        </div>
       </div>
     </div>
 
@@ -99,9 +101,33 @@ Hi, I'm here to assist you with your construction project. You can ask me anythi
                     >
                     <p style="font-style: italic; margin-bottom: 0px;">  Archivy can make mistakes. Consider checking important information.</p>
                   </div>
+
                 </div>
               </div>
             </div>
+            {% if conversation %}
+            <div>hola amigo!</div>
+              {% for message in conversation %}
+                {% if message.role == "user" %}
+                    <div class="chatMessageContainer">
+                      <div class="chatMessage user-message">{{message.content}}</div>
+                    </div>
+
+                {% elif message.role == "assistant" %}
+                  <div class="chatMessageContainer">
+                    <div class="chatMessage airesponse"> {{ message.content.response }}</div>
+                  </div>
+                  <div class="chatMessageContainer">
+                    <div class="airesponse sections">
+                      Sources:
+                      {% for source in message.content.sources %}
+                        <a class="relatedSection">{{source.class}}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
             <div style="float: left; clear: both"></div>
           </div>
           <div id="inputField">
