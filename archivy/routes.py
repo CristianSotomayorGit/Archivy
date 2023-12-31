@@ -11,9 +11,7 @@ from langchain.chains.question_answering import load_qa_chain
 import os
 from utility.pdfLoader import create_docsearch
 import json
-# , search_pdf
 
-##Load pdf
 pdf_path = os.path.join("static", "newContentWithClasses.html") 
 
 login_manager = LoginManager()
@@ -173,27 +171,13 @@ class MarketSurveyform(FlaskForm):
 
 
 
-# TODO: must build a landing page
 @app.route('/')
 def index():
     return redirect(request.referrer or url_for('viewcode'))
 
-# @app.route('/iframe_sidebar_content')
-# def iframe_sidebar_content():
-#     filename = request.args.get('filename')
-
-#     return render_template('codes/' + str(filename))
-
-# @app.route('/iframe_code_content')
-# def iframe_code_content():
-#     filename = request.args.get('filename')
-
-#     return render_template('codes/2010-design-standards_files/' + str(filename))
-
 @app.route('/iframe')
 def iframe():
     filename = request.args.get('filename')
-    print('attempt  render')
     return render_template('codes/2010-design-standards/' + str(filename))
 
 
@@ -214,7 +198,6 @@ def marketSurvey():
 
     except SQLAlchemyError as e:
         db.session.rollback() 
-        print(e)
 
     return render_template('marketsurvey.html', form=form)
 
@@ -230,17 +213,10 @@ def viewcode():
     json_data = session.pop('json_data', None)
 
     if json_data:
-        print('fhsf;lsafd;lhds;flhsad;fhsadlkfjh')
-        print(json_data)
         conversation = json.loads(json_data)
-        print(conversation)
-        for message in conversation:
-            print(message)
         return render_template('code.html', conversation=conversation)
     
-    print('fhsf;lsafd;lhds;flhsad;fhsadlkfjh')
     return render_template('code.html')
-
 
 @app.route('/conversation/<int:conversation_id>')
 def conversation(conversation_id):
@@ -271,10 +247,8 @@ def projectdetail(project_id):
 @login_required
 def deleteproject(project_id):
     try:
-        # Query the project based on the project_id
         project = Project.query.get(project_id)
         
-        # Ensure the current user owns the project before deleting
         if project and project.user_id == current_user.id:
             db.session.delete(project)
             db.session.commit()
@@ -285,7 +259,6 @@ def deleteproject(project_id):
     except SQLAlchemyError as e:
         db.session.rollback()
         flash('An error occurred while deleting the project', 'error')
-        print(e)
 
     return redirect(url_for('profile'))
 
@@ -294,10 +267,8 @@ def deleteproject(project_id):
 @login_required
 def deleteconversation(conversation_id):
     try:
-        # Query the project based on the project_id
         conversation = Conversation.query.get(conversation_id)
         
-        # Ensure the current user owns the project before deleting
         if conversation:
             db.session.delete(conversation)
             db.session.commit()
@@ -308,7 +279,6 @@ def deleteconversation(conversation_id):
     except SQLAlchemyError as e:
         db.session.rollback()
         flash('An error occurred while deleting the conversation', 'error')
-        print(e)
 
     return redirect(request.referrer or url_for('login'))
 
@@ -318,20 +288,14 @@ def newproject():
     form = NewProjectForm()
 
     try:
-        print('yoooooooooooooooo')
         if form.validate_on_submit():
             new_project = Project(user_id=current_user.id, name=form.name.data,address=form.address.data, description=form.description.data)
             db.session.add(new_project)
             db.session.commit()
             return redirect(url_for('profile'))
-        else:
-            print(form.name.data)
-            print(form.address.data)
-            print(form.description.data)
 
     except SQLAlchemyError as e:
         db.session.rollback() 
-        print(e)
 
     return render_template('newproject.html', form=form)
 
@@ -339,8 +303,7 @@ def newproject():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('login'))  # Assuming 'login' is the endpoint for your login page.
-
+    return redirect(url_for('login')) 
 
 @app.route('/profile')
 @login_required
@@ -366,16 +329,9 @@ def register():
             db.session.add(new_user)
             db.session.commit()
             return redirect(url_for('login'))
-        else:
-            print(form.firstname.data)
-            print(form.lastname.data)
-            print(form.email.data)
-            print(form.username.data)
-            print(form.password.data)
 
     except SQLAlchemyError as e:
         db.session.rollback() 
-        print(e)
 
     return render_template('register.html',form=form)
 
@@ -396,17 +352,12 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
 
-                # Prompt user for market research info
                 if user.hasAnswered == False:
                     return redirect(url_for('marketSurvey'))
                 
                 else:
                     return redirect(url_for('viewcode'))
     return render_template('login.html', form=form)
-
-
-print(app.config['OPEN_AI_SECRET_KEY'])
-
 
 docsearch_obj= create_docsearch(
 pdf_path,
@@ -443,7 +394,6 @@ def process_message():
 
     relatedChunks = []
     for doc in docs:
-        print(doc.metadata)
         relatedChunks.append(doc.metadata)
 
     responseText = chain.run(input_documents=docs, question=conversation_history)
@@ -455,14 +405,6 @@ def process_message():
     conversation_history.append({"role": "assistant", "content": response})
 
     data = json.dumps(conversation_history)
-
-    print(responseText)
-    print("")
-    print(relatedChunks)
-    print("")
-    print(data)
-    print("")
-
 
     latest_conversation = Conversation.query.order_by(Conversation.id.desc()).first()
 
