@@ -4,12 +4,9 @@
 Archivy is a Python and Flask-based web application designed to streamline the interpretation of construction codes for industry professionals. By integrating advanced machine learning models, including ChatGPT and a Retrieval-Augmented Generation (RAG) system, Archivy offers a user-friendly platform for quickly accessing accurate building code information. The application utilizes a Pinecone vector database to enhance the accuracy and relevancy of search results, making it a powerful tool for architects, contractors, and construction professionals facing the challenge of efficiently navigating and complying with complex building laws. This innovative approach to code interpretation aims to enhance operational efficiency and compliance accuracy in the construction industry by providing precise, easily accessible information through a natural language user interface.
 
 ## Usage
-To use Archivy, simply visit the application URL, agree to the AI product safety warning, and start interacting with the chatbot by typing your construction code-related queries into the provided text box. For detailed instructions, refer to the User Guide section below.
-
-![Alt Text]()
+Archivy is a web-based application and does not require installation. Access it via: http://archivy.io on desktop or mobile.
 
 <img src="https://media.giphy.com/media/QY31wTPrOP7dB73sDL/giphy.gif" width="830" />
-
 
 ## Features
 - **Intelligent Code Interpretation**: Utilizes ChatGPT models and a Retrieval-Augmented Generation (RAG) system for accurate responses.
