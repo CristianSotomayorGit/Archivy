@@ -6,7 +6,7 @@ Archivy is a Python and Flask-based web application designed to streamline the i
 ## Usage
 To use Archivy, simply visit the application URL, agree to the AI product safety warning, and start interacting with the chatbot by typing your construction code-related queries into the provided text box. For detailed instructions, refer to the User Guide section below.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://media.giphy.com/media/QY31wTPrOP7dB73sDL/giphy.gif)
 
 ## Features
 - **Intelligent Code Interpretation**: Utilizes ChatGPT models and a Retrieval-Augmented Generation (RAG) system for accurate responses.
