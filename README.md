@@ -8,7 +8,7 @@ To use Archivy, simply visit the application URL, agree to the AI product safety
 
 ![Alt Text]()
 
-<img src="https://media.giphy.com/media/QY31wTPrOP7dB73sDL/giphy.gif" width="830" height="830" />
+<img src="https://media.giphy.com/media/QY31wTPrOP7dB73sDL/giphy.gif" width="830" />
 
 
 ## Features
